@@ -1,0 +1,78 @@
+1. O que é Git e GitHub
+- Git é um software código aberto que permite o controle de versionamento de código de um projeto através de um repositório local.
+- O GitHub nos permite sincronizar o repositório local com um repositório remoto em Cloud, além de permitir colaborações e dentre várias outras funcionalidades.
+
+7. Inicializando seu primeiro repositório
+- Tracking significa que a branch local tem um relacionamento direto com a branch remota.
+- Com o comando `git status` você consegue verificar arquivos o status dos arquivos do repositório
+ 
+8. Realizando o Tracking dos arquivos
+- Com `git add *nome_do_arquivo* você consegue adicionar um arquivo para o stage. Com `git add .` você adiciona todos os arquivos modificados para o stage.
+- Existem os status staged e unstaged. Staged significa que ele está pronto para fazer o commit.
+- Para remover um arquivo do stage, digite o comando `git rm --cached *nome_do_arquivo*` 
+
+9. Realizando o primeiro commit
+- O commit é equivalente a uma versão(snapshot)
+- Para fazer, digite o comando `git commit -m "*nome do commit*"`
+
+10. Modificando um arquivo
+- Para você visualizar detalhes sobre a modificação de um arquivo, como um código, é possível digitar o comando `git diff`
+- Estágios: Working ---Staging ---- Commit 
+- Working: quando algum arquivo é alterando, quer dizer que você está trabalhando nele
+- Staging: quando você adiciona o arquivo para stage, ou seja, ele está pronto para ser commitado
+- Commit: a criação de uma versão nova do projeto.
+- Com `git log` você consegue ver o histórico de commits.
+- Com git log --oneline, a visualização do histórico fica mais simplificada.
+
+11. Pulando o staging
+- É possível pular o estado Staging e realizar o commit com o comando `git commit -a -m "seu commit"`
+
+12 - Removendo e restaurando arquivos
+ - PAra remover, digite `git rm "nome arquivo"`
+ - Existe uma diferença entre remover diretamente pela interface, e remover com o comando `git rm`. Usando o comando, o git sabe que o arquivo foi removido,
+ pois ele está sendo monitorado pelo git. 
+ - Para restaurar use `git restore --staged "nome do arquivo"` e depois `git restore "nome do arquivo"`
+ 
+ 13 - Renomeando arquivos
+ -É sempre melhor fazer essas operações com comandos git
+ - O comando `git mv "nome antigo" "nome novo" altera o nome de um arquivo para outro nome.
+ 
+ 14 - Realizar um amend em uma mensagem do commit
+ - Para alterar uma mensagem do último commit, digite o comando `git commit -m "nome novo do commit" --amend`
+ 
+ 15 - Log detalhado
+ - Com o comando `git log p`você consegue ver um log detalhado de todas as mudanças de todos os commits realizados
+ 
+ 16 - Git reset
+ - Git reset serve para você "retornar no tempo", ou seja, retornar sua aplicação em um outro commit
+ - Existem 3 modos: soft, mixed e hard.
+ - usando o soft, você volta pro commit especificado e deixa o restante das alterações no estado staged.
+ - com o mixed, você volta pro commit especificado e deixa o restante das alterações no estado unstaged, ou seja você tem que fazer um add.
+ - com o hard, você volta pro commit especificado e remove qualquer coisa feita depois do commit especificado.
+ - git reset --*tipo de reset* *número do commit*
+ 
+ 18 - Git alias
+ - É como se você criasse um atalho para executar um comando
+ - Por exemplo, substituir o comando `git log --oneline` por algo mais simples como `git logol`
+ - `git config alias.logol "log --oneline"` (alias.novo_nome "comando pra ser substituído") 
+ 
+ 19 - Branch
+ - Branchs são canais paralelos em que se é possível trabalhar novas funcionalidades sem alterar o código principal na branch main.
+ - Depois que a funcionalidade é feita, é feito uma integração (merge) com a branch main
+ - Para criar uma branch, digite `git branch *NomeDaBranch*
+ - Com o comando `git switch *nome_da_branch* você consegue alterar a branch que irá trabalhar.
+ 
+ 20 - Merge
+ - Quando um commit é realizado em uma branch diferente da main, a versão fica somente na branch dev. Portanto, caso você queira integrar o código,
+ faça um switch para a main e digite `git merge -m "sua_mensagem" *nome_da_branch_que_você_quer_integrar_na main*`
+ - Para deletar uma branch digite o comando `git branch -d *nome_da_branch*
+ 
+ 25 - Push de outras branches
+ - Com o comando `git push --all` você realiza um push de todas as branches
+ - Caso queira realizar um push isolado
+ 
+ 27 - Criando um Issue
+ - É uma aba do github onde você consegue escrever problemas encontrados no projeto.
+ 
+ 29 - Realizando Pull das alterações
+ - O comando `git pull` puxa as alterações feitas do repositório remoto para o repositório local. Dessa forma, eles ficam sincronizados.

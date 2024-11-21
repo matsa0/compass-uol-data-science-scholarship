@@ -26,18 +26,21 @@ Utilize o arquivo README.md da Sprint para organizar todas as suas entregas. Fa�
 
 # Evidências
 
+### Curso: Aprenda Git e GitHub em 3 dias + Projetos 
 
-Ao executar o código do exercício ... observei que ... conforme podemos ver na imagem a seguir:
+- Anotações feitas durante o curso<br>
+[Anotação](./evidencias/curso_git_github/note.txt)
 
-
-![Evidencia 1](evidencias/sample.webp)
-
-
+- Vídeo evidência sobre atividades realizadas no curso<br>
+[Assistir no Youtube](https://youtu.be/eKtUz_Xe9tw)
 
 # Certificados
 
 
-- Certificado do Curso ABC
-![Curso ABC](certificados/sample.png)
+- Certificado do curso Data & AI - Ciência de Dados - Introdução
+![Certificado](./certificados/data_&_ai_introducao.jpg)
+
+- Certificado do curso Aprenda Git e GitHub em 3 dias + Projetos reais
+![Certificado](./certificados/aprenda_git_e_github_em_3_dias.jpg)
 
 
