@@ -5,6 +5,8 @@
 
 # Exercícios
 
+###  ● Curso: Aprenda Git e GitHub em 3 dias + Projetos 
+
 - **Código desafio Operadores Aritméticos**<br>
 <a id="codigo-ex01"></a>
 [Clique para visualizar o código](./exercicios/curso_programacao_python/ex01_operadores_aritmeticos/app.py)<br>
@@ -42,6 +44,14 @@
 [Clique para visualizar o código](./exercicios/curso_programacao_python/ex07_graficos/subplot.ipynb)<br>
 [Clique para visualizar a execução](#evidencia-15)
 
+
+###  ● Curso: Pandas Descomplicado: Um Guia Prático para Iniciantes
+
+- **Código Jupyter para exercícios das seções 2, 3 e 4**
+[Clique para visualizar o código](./exercicios/curso_pandas/exercicios_resolvidos_matheus_azevedo.ipynb)<br>
+[Clique aqui para visualizar as evidências](#evidencias_pandas)
+
+<br>
 
 # Evidências
 
@@ -153,6 +163,43 @@
     ![Evidência 15](./evidencias/curso_programacao_com_python/subplots.png)
 
 
+###  ● Curso: Pandas Descomplicado: Um Guia Prático para Iniciantes
+<a id="evidencias_pandas"></a>
+- Com a função `loc`do Pandas, é possível realizar uma filtragem para exibir dados em um determinado intervalo, através da utilização do index da serie.<br>
+No exemplo abaixo, a função loc é utilizada para filtrar a série e exibir os dados entre abril de 1949 e janeiro de 1950.
+
+    ![Evidência 16](./evidencias/curso_pandas/e01_loc.png)
+
+<br>
+
+- No exemplo abaixo, utiliza-se o `iloc` para realizar uma filtragem baseada em posição, das 5 primeiras linhas e as 5 primeiras colunas da serie.
+
+    ![Evidência 17](./evidencias/curso_pandas/e02_iloc.png)
+
+<br>
+
+- Com o `sort_values`, é possível ordenar os valores da coluna "Global_Sales" do dataset, de forma decrescente
+
+    ![Evidência 18](./evidencias/curso_pandas/e03_sort_values.png)
+
+<br>
+
+- O `groupby` do Pandas agrupa os dados do Dataframe baseando-se nas colunas "Genre" e "Platform" e faz uma função de agregação da média das colunas numéricas.
+
+    ![Evidência 19](./evidencias/curso_pandas/e05_group_by.png)
+
+- Na imagem abaixo, trabalha-se com a plotagem de gráficos, nesse caso, é feito um agrupamento com base na coluna "Platform", faz a contagem de registros e plota um `gráfico de barras`.
+
+    ![Evidência 20](./evidencias/curso_pandas/e06_plotbar.png)
+
+<br>
+
+- O `gráfico de dispersão` plotado utilizando as colunas de "Critic_Score" e "Global_Sales"
+
+    ![Evidência 21](./evidencias/curso_pandas/e07_plotscatter.png)
+
+<br>
+
 # Certificados
 
 - Certificado do curso **Data & AI - Ciência de Dados - Introdução**
@@ -166,3 +213,6 @@
 - Certificado do curso **Programação com Python - do Zero ao Avançado**
 
     ![Certificado](./certificados/programacao_com_python.jpg)
+
+- Ceritificado do curso **Pandas Descomplicado: Um Guia Prático para Iniciantes**
+    ![Certificado](./certificados/pandas_descomplicado.jpg)
