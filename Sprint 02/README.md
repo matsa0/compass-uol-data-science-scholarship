@@ -8,13 +8,26 @@
 ###  ➣ Curso: SQL para Análise de Dados: Do básico ao avançado
 
 
-1. ...
-[Resposta Ex1.](exercicios/ex1.txt)
+- **Exercícios Seção 3** <br>
+[Clique para visualizar o código](./exercicios/curso_sql_analise_de_dados/desafio_sec3.sql)
 
+- **Exercícios Seção 4** <br>
+[Clique para visualizar o código](./exercicios/curso_sql_analise_de_dados/desafio_sec4.sql)
 
-2. ...
-[Resposta Ex2.](exercicios/ex2.txt)
+- **Exercícios Seção 5** <br>
+[Clique para visualizar o código](./exercicios/curso_sql_analise_de_dados/desafio_sec5.sql)
 
+- **Exercícios Seção 6** <br>
+[Clique para visualizar o código](./exercicios/curso_sql_analise_de_dados/desafio_sec6.sql)
+
+- **Exercícios Seção 8** <br>
+[Clique para visualizar o código](./exercicios/curso_sql_analise_de_dados/desafio_sec8.sql)
+
+- **Exemplos Seção 9** <br>
+[Clique para visualizar o código](./exercicios/curso_sql_analise_de_dados/exemplos_sec9.sql)
+
+- **Exemplos Seção 10** <br>
+[Clique para visualizar o código](./exercicios/curso_sql_analise_de_dados/exemplos_sec10.sql)
 
 
 
@@ -30,12 +43,12 @@
     foram feitos uma **série de tratamentos**, 
     para que o dataset se tornasse mais intuitivo
     para o aprendizado, organizado e 
-    **limitadoao estado de São Paulo**.
+    **limitado ao estado de São Paulo**.
     
     - Exclusão das colunas que não fazem sentido 
     em nossa análise:
 
-        ![Evidência 01](./evidencias/curso_estatistica_para_analise_de_dados/curso_estatistica_para_analise_de_dados/sec03/exclusao_de_colunas.png)
+        ![Evidência 01](./evidencias/curso_estatistica_para_analise_de_dados/sec03/exclusao_de_colunas.png)
     
     - Verificação da quantidade de valores nulos 
     para as notas respectivas as matérias do ENEM. Tratamento através da presença nos dois dias da prova, com `TP_PRESENCA_CH == 1` e `TP_PRESENCA_CN == 1`. Isso elimina valores nulos já que a ausência é contada se o valor das variáveis forem 0:  
