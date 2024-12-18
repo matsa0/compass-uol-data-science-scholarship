@@ -1,10 +1,4 @@
 
-# Instruções
+### Link para o vídeo no OneDrive
 
-
-Neste arquivo você irá apresentar suas entregas referentes ao desafio final. 
-O desafio está presente em cada sprint ao longo do estágio. Utilize o diretório "Desafio" para organizar seus artefatos e este README.md para fazer referência aos arquivos de código-fonte e demais entregáveis solicitados.
-
-
-# Projeto 1
-[Projeto]
+- [Clique aqui para ver o vídeo](https://compasso-my.sharepoint.com/:v:/r/personal/matheus_azevedo_pb_compasso_com_br/Documents/Matheus.Azevedo-sprint02.mp4?csf=1&web=1&e=mywTAR)
