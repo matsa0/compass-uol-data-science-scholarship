@@ -80,9 +80,35 @@ No diretório de exercícios, coloquei alguns noteboooks que eu trabalhei durant
         `Lift:` Mede a força da regra. Um valor maior que 1 indica uma associação positiva entre AA e BB.
 
         No Apriori, apenas os conjuntos de itens que **atendem ao suporte mínimo definido** pelo usuário são mantidos. Além disso, a partir desse conjunto de itens mantidos, o objetivo é descobrir regras de associação com fator de **confiança maior ou igual** ao estabelecido pelo usuário.
- 
+    
+    - **Utilizando o Apriori:**<br>
+        Transformando o dataframe para uma lista e definindo as regras do **Apriori(Support, Confidence e Lift)**.
 
-- **Seção 20: Agrupamento com K-Means**<br>
+        ![Evidencia](./evidencias/sec17/apriori1.png)
+
+        **Extração das regras** do algoritmo e transformando em um **dataframe**.
+
+        ![Evidencia](./evidencias/sec17/apriori2.png)
+
+        ![Evidencia](./evidencias/sec17/apriori3.png)
+
+- **Seção 20: Agrupamento com K-Means**<br> Agrupamento ou `clusterização` é uma técnica muito utilizada em machine learning para identificar grupos (ou `clusters`) de dados que possuem **características semelhantes**. 
+
+    O `K-Means` é um dos algoritmos mais conhecidos para se trabalhar com clusterização. Ele divide os dados em **K clusters**(definido pelo usuário), calculando o `centroide`(centros de cada cluster) e ajustando até convergir.
+
+    Após encontrar os clusters, a média do cluster é calculada e os centróides são reposicionados.
+
+- **Utilizando o K-means:**<br> Utilizando uma pequena base que representa idades e salários, apliquei o algoritmo `K-means` para entender como seriam dividido **3 clusters**. A imagem mostra que foram criados 3 clusters com a média das idades sendo o centróide e a média dos salários recebidos.
+
+    ![Evidencia](./evidencias/sec20/kmeans1.png)
+
+    Os pontos maiores azuis são os centróides dos clusters.
+
+    ![Evidencia](./evidencias/sec20/kmeans2.png)
+
+    Utilizando bases de dados randômicas foi possível plotar um gráfico que permitiu visualizar muito claramente a **separação de dados em cada cluster e os seus centróides**.
+
+    ![Evidencia](./evidencias/sec20/kmeans3.png)
 
 - **Seção 21: Outros algoritmos de agrupamento**<br>
 
