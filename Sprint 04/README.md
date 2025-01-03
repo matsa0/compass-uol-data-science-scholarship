@@ -143,18 +143,39 @@ No diretório de exercícios, coloquei alguns noteboooks que eu trabalhei durant
 
     ![Evidencia](./evidencias/sec27/df_low_variance.png)
 
-    Depois de realizar alguns processos, obtivemos esse modelo com **dimensionalidade reduzida**.
+    Depois de realizar alguns processos, obtivemos esse modelo com **atributos selecionados** e **dimensionalidade reduzida**.
 
     ![Evidencia](./evidencias/sec27/low_variance2.png)
 
-- **Seção 28: Redução de dimensionalidade**<br>
+- **Seção 28: Redução de dimensionalidade**<br> A **redução de dimensionalidade** é uma técnica de análise de dados e estatística para reduzir o número de variáveis aleatórias que serão inseridas em um modelo para treino, mantendo as suas **características essenciais**.
 
-- **Seção 29: Detecção de Outliers**<br>
+    A redução de dimensionalidade pode ser útil para: 
 
+    - Melhorar o desempenho, a precisão e a interpretabilidade dos modelos
+    - Economizar tempo e espaço
+    - Eliminar redundâncias
+    - Melhorar a eficiência dos algoritmos de aprendizado de máquina
+
+    Um dos algortimos mais utilizados é o `PCA(Principal Component Analysis)`. Ele transforma os atributos originais em componentes principais, que são combinações lineares das variáveis.
+
+    Na imagem abaixo é possível observar que o algoritmo fez uma combinação de atributos, e o que eram 14, viraram 6 atributos, reduzindo a dimensionalidade.
+
+    ![Evidencia](./evidencias/sec28/pca1.png)
+
+    O modelo teve uma acurácia muito boa.
+
+    ![Evidencia](./evidencias/sec28/pca2.png)
+
+- **Seção 29: Detecção de Outliers**<br> Um `Outlier` é um valor anormal, ou seja, fora do padrão(afastados da média). Esse valor anormal pode ser decorrente do acaso, **erro no preenchimento dos dados ou fraudes**, sendo necessário tratá-los seja **removendo o registro**, o que pode influenciar negativamente na base de dados, **substituí-lo por outro valor**, ou **não fazer nada**.
+
+    Na imagem abaixo é possível visualizar os outliers(pontos) que representam valores anormais relacionados a idades em um dataframe, provavelmente decorrente de erros de digitação ou de cálculo.
+
+    ![Evidencia](./evidencias/sec29/boxplot.png)
+
+    Scatter plot que mostra a relação entre a idade e a pontuação de uma pessoa.
+
+    ![Evidencia](./evidencias/sec29/scatter.png)
 
 # 👨🏼‍🎓 Certificados
 
 - Certificado do Curso **Machine Learning com Amazon AWS e SageMaker**
-
-- Certificado do Curso **Machine Learning e Data Science com Python de A a Z**
-
