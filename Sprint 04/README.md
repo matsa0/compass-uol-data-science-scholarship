@@ -5,6 +5,10 @@
 
 # 📝 Exercícios
 
+### ➣ Curso: Machine Learning com Amazon AWS e SageMaker
+
+
+### ➣ Curso: Machine Learning e Data Science com Python de A a Z
 No diretório de exercícios, coloquei alguns noteboooks que eu trabalhei durante o curso.
 
 # 🔴 Vídeo - [Desafio Sprint 04]
