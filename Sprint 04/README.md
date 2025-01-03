@@ -98,21 +98,54 @@ No diretório de exercícios, coloquei alguns noteboooks que eu trabalhei durant
 
     Após encontrar os clusters, a média do cluster é calculada e os centróides são reposicionados.
 
-- **Utilizando o K-means:**<br> Utilizando uma pequena base que representa idades e salários, apliquei o algoritmo `K-means` para entender como seriam dividido **3 clusters**. A imagem mostra que foram criados 3 clusters com a média das idades sendo o centróide e a média dos salários recebidos.
+    - **Utilizando o K-means:**<br> Utilizando uma pequena base que representa idades e salários, apliquei o algoritmo `K-means` para entender como seriam dividido **3 clusters**. A imagem mostra que foram criados 3 clusters com a média das idades sendo o centróide e a média dos salários recebidos.
 
-    ![Evidencia](./evidencias/sec20/kmeans1.png)
+        ![Evidencia](./evidencias/sec20/kmeans1.png)
 
-    Os pontos maiores azuis são os centróides dos clusters.
+        Os pontos maiores azuis são os centróides dos clusters.
 
-    ![Evidencia](./evidencias/sec20/kmeans2.png)
+        ![Evidencia](./evidencias/sec20/kmeans2.png)
 
-    Utilizando bases de dados randômicas foi possível plotar um gráfico que permitiu visualizar muito claramente a **separação de dados em cada cluster e os seus centróides**.
+        Utilizando bases de dados randômicas foi possível plotar um gráfico que permitiu visualizar muito claramente a **separação de dados em cada cluster e os seus centróides**.
 
-    ![Evidencia](./evidencias/sec20/kmeans3.png)
+       ![Evidencia](./evidencias/sec20/kmeans3.png)
 
-- **Seção 21: Outros algoritmos de agrupamento**<br>
+- **Seção 21: Outros algoritmos de agrupamento**<br> Nesta seção aprendemos sobre o agrupamento hierárquico, que basicamente tem como objetivo estabelecer uma **hierarquia de de agrupamentos**, onde é criada uma estrutura em forma de árvore que indica o número de clusters
 
-- **Seção 27: Seleção de atributos**<br>
+    O `dendrograma`(árvore de clusters) exibe os grupos formados pelo agrupamento hierárquico em cada passo e em seus níveis de similaridade.
+
+    ![Evidencia](./evidencias/sec21/dendrograma_exemplo.png)
+
+    Scatter Plot que evidencia os clusters aglomerativos criados em cima de uma base de cartão de crédito, onde o Eixo X representa o limite disponibilizado no cartão de crédito, e o Eixo Y o total gasto pelo cliente(Os dados estão normalizados).
+
+    ![Evidencia](./evidencias/sec21/scatter_plot.png)
+
+    - **Clientes conservadores (amarelo):** Baixo gasto apesar do alto limite disponível.
+    - **Clientes equilibrados (rosa):** Usam uma parte significativa de seus limites de forma consistente.
+    - **Clientes dependentes (azul):** Altos gastos em relação a limites baixos.
+
+    - **DBSCAN:**<br> DBSCAN é um algoritmo de agrupamento baseado em densidade, agrupando pontos similares no mesmo espaço, **não sendo necessário descobrir e especificar o número de clusters**.
+
+    Ele é mais rápido e geralmente apresenta melhores resultados do que o K-Means, encontrando padrões não lineares e sendo mais robusto contra outliers.
+
+    ![Evidencia](./evidencias/sec21/dbscan.png)
+
+    ![Evidencia](./evidencias/sec21/scatter_plot_dbscan.png)
+
+
+- **Seção 27: Seleção de atributos**<br> A seleção de atributos é muito importante para a clusterização e machine learnnig no geral, pois o seu objetivo é **identificar os atributos mais relevantes** que influenciam os padrões ou comportamentos dos dados, reduzindo a dimensionalidade e melhorando a interpretabilidade.
+
+    Considerando uma análise onde queremos prever o salário de uma pessoa, vamos selecionar somente os atributos com o `threshold mínimo de 0.05` e utilizar o algortimo de `Low Variance` em cima disso.
+
+    ![Evidencia](./evidencias/sec27/low_variance.png)
+
+    Criação de um dataframe com somente os índices selecionados, eles vão auxiliar nossa análise.
+
+    ![Evidencia](./evidencias/sec27/df_low_variance.png)
+
+    Depois de realizar alguns processos, obtivemos esse modelo com **dimensionalidade reduzida**.
+
+    ![Evidencia](./evidencias/sec27/low_variance2.png)
 
 - **Seção 28: Redução de dimensionalidade**<br>
 
