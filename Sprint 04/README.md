@@ -1,11 +1,15 @@
 
 <h1 align="center">
-    <strong>SPRINT 03</strong>
+    <strong>SPRINT 04</strong>
 </h1>
 
 # 📝 Exercícios
 
 ### ➣ Curso: Machine Learning com Amazon AWS e SageMaker
+
+- **Seção 03: Regressão Linear Learner e XGBoost**<br> A seção 03 possui um exercício que sintetiza todo o conteúdo aprendido na seção acerca principalmente do algoritmo `XGBoost. Porém, trabalhamos com **tratamento da base de dados**, **configurações do SageMaker**, **treinamento** e **deploy** do XGBoost.
+
+    [Clique para visualizar o código](./exercicios/curso_aws_e_sagemaker/sec3/xgboost_credit_card.ipynb)
 
 
 ### ➣ Curso: Machine Learning e Data Science com Python de A a Z
@@ -16,6 +20,110 @@ No diretório de exercícios, coloquei alguns noteboooks que eu trabalhei durant
 # 🔎 Evidências
 
 ### ➣ Curso: Machine Learning com Amazon AWS e SageMaker
+
+- **Seção 02: Introdução ao AWS**<br> Nesta seção aprendi sobre os serviços mais utilizados da AWS, como o SageMaker, S3 e IAM, entendendo um pouco das funcionalidades e propósitos de cada um deles.
+
+    - **Amazon SageMaker:** Plataforma de machine learning que facilita a criação, treinamento e implantação de modelos. Integra-se com outros serviços da AWS, como S3 e IAM, para oferecer escalabilidade e simplicidade no gerenciamento de modelos e dados.
+
+    - **Amazon S3:** Serviço de armazenamento escalável e seguro. Aprendi sobre buckets, que são como pastas para armazenamento de arquivos.
+    
+    - **AWS IAM:** Serviço que gerencia usuários, permissões e funções para garantir a segurança dos recursos.
+
+        Exemplo de criação de `bucket` via código:
+
+        ![Evidencia](./evidencias/curso_aws_sagemaker/sec2/criacao_bucket.png) 
+
+- **Seção 03: Regressão Linear Learner e XGBoost**<br> 
+
+    - **Configurações do SageMaker:** Realização da configuração prévia do SageMaker e buckets E3 para preparar os dados que serão enviados através do treinamento do modelo.
+
+        Os dados estão sendo enviados de forma que os algoritmos integrados da AWS possam utilizá-los no treinamento de modelos.
+
+        Um `buffer` é criado para armazenar os dados em memória e é feito uma conversão para o `Dense Tensor` que é o formato binário necessário para os algoritmos integrados do SageMaker.
+
+        ![Evidencia](./evidencias/curso_aws_sagemaker/sec3/preparacao_dados.png)
+
+        Treinamento `Linear Learner` com a instânica **ml.m5.large**
+
+        ![Evidencia](./evidencias/curso_aws_sagemaker/sec3/treinamento_linear_learner.png)
+
+        2025-01-07 12:10:30 Completed - Training job completed<br>
+        Training seconds: 150<br>
+        Billable seconds: 150
+
+        Criação de um modelo de `Deploy ` que pode ser utilizado para realização de previsões.
+
+        ![Evidencia](./evidencias/curso_aws_sagemaker/sec3/deploy.png)
+
+        Avaliação do modelo preditivo através das métricas Esse trecho de código está avaliando a qualidade de um modelo preditivo utilizando as métricas **MAE (Mean Absolute Error)** e **MSE (Mean Squared Error)**.
+
+        Essas métricas ajudam a avaliar o desempenho do modelo preditivo, indicando quão próximas estão as previsões (previsions) dos valores reais (y_test).
+
+        - **MAE:** Indica o erro médio absoluto, fácil de interpretar.
+        - **MSE:** Penaliza mais os erros grandes, destacando previsões discrepantes.
+    
+        ![Evidencia](./evidencias/curso_aws_sagemaker/sec3/mae_mse.png)
+
+    - **XGBoost:** O `Extreme Gradient Boosting` é uma biblioteca de aprendizado de máquina baseada no algoritmo de `gradient boosting`, amplamente utilizada por sua eficiência, flexibilidade e alto desempenho.
+
+        ![Evidencia](./evidencias/curso_aws_sagemaker/sec3/treinamento_xgboost.png)
+
+        2025-01-08 13:39:57 Uploading - Uploading generated training model<br>
+        2025-01-08 13:39:57 Completed - Training job completed<br>
+        Training seconds: 105<br>
+        Billable seconds: 105
+
+        É interessante observar que o `RMSE(Root Mean Squared Error)` diminuiu consistentemente ao longo das iterações, tanto para os dados de treinamento quanto de validação, o que mostra que **o modelo está aprendendo adequadamente**.
+
+        - **Deploy e previsões utilizando o XGBoost**
+
+        ![Evidencia](./evidencias/curso_aws_sagemaker/sec3/deploy_xgboost.png)
+
+        - **Tuning:** processo de encontrar os melhores valores para os hiperparâmetros de um modelo de Machine Learning (ML), a fim de melhorar sua performance em um determinado conjunto de dados.
+
+            Tendo como objetivo final a métrica `RMSE(Root Mean Squared Error)`, obtive os seguintes resultados:
+
+            ![Evidencia](./evidencias/curso_aws_sagemaker/sec3/hyperparameters_rmse.png) 
+
+            Best Training Job:
+
+            ![Evidencia](./evidencias/curso_aws_sagemaker/sec3/btj.png)
+
+            Hyperparameters:
+
+            ![Evidencia](./evidencias/curso_aws_sagemaker/sec3/hyperparameters_xgboost_train.png)
+
+- **Seção 04: Classificação com Linear Learner e XGBoost**<br> O **XGBoost (Extreme Gradient Boosting)** é uma biblioteca de aprendizado de máquina baseada no algoritmo de `gradient boosting`, amplamente utilizada por sua eficiência, flexibilidade e alto desempenho.
+
+    O XGBoost utiliza o gradient boosting, que combina vários modelos fracos (geralmente `árvores de decisão`) de maneira sequencial e cada árvore é construída para **corrigir os erros das árvores anteriores**, minimizando uma função de perda.
+
+
+- **Seção 05: Séries temporais com DeepAR**<br>
+
+
+- **Seção 06: Outliers com Random Cut Forest**<br>
+
+
+- **Seção 07: PCA e agrupamento K-means**<br>
+
+
+- **Seção 08: Redes neurais artificiais - classificação de imagens**<br>
+
+
+- **Seção 09: Sagemaker com TensorFlow**<br>
+
+
+- **Seção 10: Endpoint externo**<br>
+
+
+- **Seção 12: Anexo 1: Redes neurais artificiais**<br>
+
+
+- **Seção 13: Anexo 2: Redes neurais convolucionais**<br>
+
+
+- **Seção 14: Anexo 3: Redes neurais recorrentes**<br>
+
 
 ### ➣ Curso: Machine Learning e Data Science com Python de A a Z
 
