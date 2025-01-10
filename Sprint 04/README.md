@@ -11,6 +11,10 @@
 
     [Clique para visualizar o código](./exercicios/curso_aws_e_sagemaker/sec3/xgboost_credit_card.ipynb)
 
+- **Seção 04: Classificação com Linear Learner e XGBoost**<br> No exercício dessa seção trabalhamos com o treinamento de um modelo XGBoost, o seu deploy e análise das previsões, a realização do Tuning para uma melhor escolha dos hiperparâmetros e a construção de um novo modelo baseado no Tuning.
+
+    [Clique para visualizar o código](./exercicios/curso_aws_e_sagemaker/sec4/xgboost-census.ipynb)
+
 
 ### ➣ Curso: Machine Learning e Data Science com Python de A a Z
 No diretório de exercícios, coloquei alguns noteboooks que eu trabalhei durante o curso.
@@ -97,9 +101,44 @@ No diretório de exercícios, coloquei alguns noteboooks que eu trabalhei durant
 
     O XGBoost utiliza o gradient boosting, que combina vários modelos fracos (geralmente `árvores de decisão`) de maneira sequencial e cada árvore é construída para **corrigir os erros das árvores anteriores**, minimizando uma função de perda.
 
+    Nessa seção também somos introduzidos ao conceito de `Regressão Logística`, onde seu objetivo é **prever classes**, diferentemente da regressão que era prever números. Ela é muito utilizada para resolver problemas de classificação binária ou seja, quando o objetivo é prever se algo pertence a uma de duas categorias **(ex.: "sim" ou "não", "verdadeiro" ou "falso", "1" ou "0")**.
 
-- **Seção 05: Séries temporais com DeepAR**<br>
+    Exemplo de criação e treinamento de um modelo `Linear Learner`
 
+    ![Evidencia](./evidencias/curso_aws_sagemaker/sec4/train_linear_learner.png)
+
+    Após o deploy e realização das previsões, obtive esses valores para as métricas na imagem abaixo, o que eu acredito estar **incorreto**. Isso evidencia que o modelo não foi bem treinado. Porém, para evitar maiores custos, não criei outro endpoint, mas acredito que alterar os hiperparâmetros como o `feature_dim` e `num_models` poderia trazer resultados mais coerentes.
+
+    ![Evidencia](./evidencias/curso_aws_sagemaker/sec4/results_linear_learner.png)
+
+- **Seção 05: Séries temporais com DeepAR**<br> Séries temporais em ciência de dados, se referem a dados que são registrados com base em intervalos de tempo regulares. A principal característica deles é a **dependência temporal**, pois valores futuros podem ser influenciados por valores passados.
+
+    No curso estudamos séries temporais com o algoritmo `DeepAR` em uma base de dados de vendas de bicicletas em um dado período de tempo. A frequência de tempo trabalhada foi **diária**.
+
+    ![Evidencia](./evidencias/curso_aws_sagemaker/sec5/df.png)
+
+    O DeepAR é um modelo desenvolvido pela Amazon que se destaca em previsões de séries temporais, muito utilizado quando se busca prever valores futuros de maneira precisa.
+
+    Exemplo de treinamento do modelo:<br>
+    Interessante ressaltar a definição de **hiperparâmetros** de forma separada. A visualização da documentação é muito útil para descobrir parâmetros **obrigatórios** e **opcionais**.
+
+    ![Evidencia](./evidencias/curso_aws_sagemaker/sec5/train_deepar.png)
+
+    Exemplo de deploy(criação do **endpoint**):
+
+    ![Evidencia](./evidencias/curso_aws_sagemaker/sec5/deploy.png)
+
+    Resultado gráfico das previsões do DeepAR.<br> 
+    
+    ![Evidencia](./evidencias/curso_aws_sagemaker/sec5/grafico.png)
+    
+    A `mediana`(linha vermelha) é a previsão central do modelo, ou seja, o valor mais provável estimado.
+
+    O `alvo`(linha azul) são os valores reais observados na série temporal, usados para comparar com as previsões.
+
+    O `intervalo de confiança`(área amarela) evidencia  a incerteza das previsões, delimitada pelos percentis 10 e 90 definidos.
+
+    É possível observar, pela aproximação da linha vermelha à azul, que o modelo **prevê bem os valores futuros**.
 
 - **Seção 06: Outliers com Random Cut Forest**<br>
 
