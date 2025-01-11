@@ -15,6 +15,18 @@
 
     [Clique para visualizar o código](./exercicios/curso_aws_e_sagemaker/sec4/xgboost-census.ipynb)
 
+- **Seção 05: Séries temporais com DeepAR**<br> Neste exercício utilizamos uma base de dados das ações da Petrobras. A ideia era realizar uma previsão do preço das ações através de atributos que representam o preço das ações diáriamente, sendo interessante utilizar o DeepAR.
+
+    [Clique para visualizar o código](./exercicios/curso_aws_e_sagemaker/sec5/petr4-deepar.ipynb)
+
+- **Seção 06: Outliers com Random Cut Forest**<br> A ideia do exercício da seção 06 é detectar os outliers de uma base de dados de ações da Petrobras. Esse exercício foi interessante para reforçar como utilizar o algoritmo Random Cut Forest.
+
+    [Clique para visualizar o código](./exercicios/curso_aws_e_sagemaker/sec6/petr4_outliers_random_cut.ipynb)
+
+- **Seção 07: PCA e agrupamento K-means**<br> O exercício dessa seção foi interessante para reforçar a utilização do algoritmo PCA para reduzir a dimensionalidade do conjunto de dados e o Linear Learner para a classificação.
+
+
+    [Clique para visualizar o código](./exercicios/curso_aws_e_sagemaker/sec7/pca-census-classificacao.ipynb)
 
 ### ➣ Curso: Machine Learning e Data Science com Python de A a Z
 No diretório de exercícios, coloquei alguns noteboooks que eu trabalhei durante o curso.
@@ -140,11 +152,60 @@ No diretório de exercícios, coloquei alguns noteboooks que eu trabalhei durant
 
     É possível observar, pela aproximação da linha vermelha à azul, que o modelo **prevê bem os valores futuros**.
 
-- **Seção 06: Outliers com Random Cut Forest**<br>
+- **Seção 06: Outliers com Random Cut Forest**<br> Os Outliers como já sabemos são valores fora do padrão, ou muito discrepantes dos demais da base de dados.
+    
+    O `Random Cut Forest` é muito utilizado para a detecção de outliers em dados de alta dimensionalidade ou séries temporais(como visto na seção anterior). O **RCF** baseia-se na construção de florestas de árvores que particionam os dados de forma aleatória sempre avaliando o quão **fora do normal** cada ponto é em **relação ao conjunto de dados** e fazendo sua detecção. 
+    
+    Ele associa um `anomaly score` para cada um dos registros. Valores baixos indicam registros normal, valores altos indicam anomalia no registro. Por esse motivo, o RCF é tão eficaz para a detecção de outliers.
 
+    ![Evidencia](./evidencias/curso_aws_sagemaker/sec6/treinamento_rcf.png)
 
-- **Seção 07: PCA e agrupamento K-means**<br>
+    Detalhes do treinamento:<br>
+    2025-01-10 14:19:13 Training - Training image download completed. Training in progress.<br>
+    2025-01-10 14:19:13 Uploading - Uploading generated training model<br>
+    2025-01-10 14:19:25 Completed - Training job completed<br>
+    Training seconds: 140<br>
+    Billable seconds: 53<br>
+    Managed Spot Training savings: 62.1%<br>
 
+    Interessante notar que o parâmetro `use_spot_instances = True` salvou 62.1% de custos.
+
+    Através da documentação do RCF, foi possível saber que os scores que possuírem valores **acima de 3 desvios padrões com base na média** são considerados valores anormais. Através dessa informação, foi possível fazer esse calculo e obter um dataframe com os outliers.
+
+    ![Evidencia](./evidencias/curso_aws_sagemaker/sec6/calculo_outliers.png)
+
+- **Seção 07: PCA e agrupamento K-means**<br> `PCA` é um algoritmo que tem como objetivo **reduzir a dimensionalidade** enquanto preserva a maior quantidade possível de variabilidade (informação) presente no dataset. Quando há muitos atributos com alta correlação em uma base de dados, é um **sinal** que podemos reduzir a sua dimensionalidade, pois muitas colunas estão correlacionadas.
+
+    ![Evidencia](./evidencias/curso_aws_sagemaker/sec7/pca_train.png)
+
+    2025-01-11 11:43:53 Completed - Training job completed<br>
+    Training seconds: 120<br>
+    Billable seconds: 120<br>
+
+    Deploy:
+
+    ![Evidencia](./evidencias/curso_aws_sagemaker/sec7/deploy_reducao.png)
+
+    Redução de dimensionalidade(de 25 para 2 colunas):
+
+    ![Evidencia](./evidencias/curso_aws_sagemaker/sec7/deploy_reucao2.png)
+
+    `K-Means` é um dos algoritmos mais conhecidos para se trabalhar com clusterização. Ele divide os dados em **K clusters**(definido pelo usuário), calculando o centroide(centros de cada cluster) e ajustando até convergir.
+
+    Após encontrar os clusters, a média do cluster é calculada e os **centróides são reposicionados**.
+
+    Treinamento do K-Means:
+
+    ![Evidencia](./evidencias/curso_aws_sagemaker/sec7/kmeans_train.png)
+
+    Scatter Plot para **k = 4**:
+
+    ![Evidencia](./evidencias/curso_aws_sagemaker/sec7/clusters_Figure.png)
+
+    - Os **pontos verdes** são pessoas que gastam pouco no cartão de crédito e possuem pouco limite;
+    - Os **pontos amarelos** são pessoas que possuem um limite maior, mas gastam pouco;
+    - Os **pontos vermelhos** são pessoas que ficam na parte central, ou seja, possuem um limite médio de cartão de crédito e também gastam de forma moderada.
+    - Os **pontos azuis** são pessoas que possuem um limite alto e gastam muito no cartão de crédito. 
 
 - **Seção 08: Redes neurais artificiais - classificação de imagens**<br>
 
