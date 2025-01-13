@@ -3,9 +3,11 @@
     <strong>SPRINT 04</strong>
 </h1>
 
+# 🔴 Vídeo - [Desafio Sprint 04]
+
 # 📝 Exercícios
 
-### ➣ Curso: Machine Learning com Amazon AWS e SageMaker
+### 🧠 Curso: Machine Learning com Amazon AWS e SageMaker
 
 - **Seção 03: Regressão Linear Learner e XGBoost**<br> A seção 03 possui um exercício que sintetiza todo o conteúdo aprendido na seção acerca principalmente do algoritmo `XGBoost. Porém, trabalhamos com **tratamento da base de dados**, **configurações do SageMaker**, **treinamento** e **deploy** do XGBoost.
 
@@ -28,14 +30,12 @@
 
     [Clique para visualizar o código](./exercicios/curso_aws_e_sagemaker/sec7/pca-census-classificacao.ipynb)
 
-### ➣ Curso: Machine Learning e Data Science com Python de A a Z
+### 🧠 Curso: Machine Learning e Data Science com Python de A a Z
 No diretório de exercícios, coloquei alguns noteboooks que eu trabalhei durante o curso.
-
-# 🔴 Vídeo - [Desafio Sprint 04]
 
 # 🔎 Evidências
 
-### ➣ Curso: Machine Learning com Amazon AWS e SageMaker
+### 🧠 Curso: Machine Learning com Amazon AWS e SageMaker
 
 - **Seção 02: Introdução ao AWS**<br> Nesta seção aprendi sobre os serviços mais utilizados da AWS, como o SageMaker, S3 e IAM, entendendo um pouco das funcionalidades e propósitos de cada um deles.
 
@@ -207,31 +207,77 @@ No diretório de exercícios, coloquei alguns noteboooks que eu trabalhei durant
     - Os **pontos vermelhos** são pessoas que ficam na parte central, ou seja, possuem um limite médio de cartão de crédito e também gastam de forma moderada.
     - Os **pontos azuis** são pessoas que possuem um limite alto e gastam muito no cartão de crédito. 
 
-- **Seção 08: Redes neurais artificiais - classificação de imagens**<br>
+- **Seção 08: Redes neurais artificiais - classificação de imagens**<br> Na seção 08 vemos como configurar, treinar e realizar deploy de uma rede neural convolucional(cnn) para trabalhar com classificação de imagens.
+
+    ![Evidencia](./evidencias/curso_aws_sagemaker/sec8/treinamento_cnn.png)
+
+    Foi realizado uma aplicação do modelo treinado em imagens individuais para verificar predições, além de identificar a categoria ou rótulo correspondente à maior probabilidade em uma previsão de classificação, baseando-se no resultado gerado pelo modelo.
+
+    ![Evidencia](./evidencias/curso_aws_sagemaker/sec8/probab_maior.png)
+
+- **Seção 09: Sagemaker com TensorFlow**<br> Na seção trablha-se com o treinamento e a avaliação de uma rede neural usando a base de dados **MNIST** com o `TensorFlow` e o `Keras`.
+
+    A base MNIST, que contém imagens de dígitos manuscritos **(28x28 pixels)**, é carregada e dividida em dados de treinamento e teste.
+
+    ![Evidencia](./evidencias/curso_aws_sagemaker/sec9/mnist.png)
+
+    Em resumo, a seção aborda a criação e treinamento de uma rede neural para classificação de dígitos através da base MNIST. Também é avaliado o desempenho do modelo nos dados de teste para medir sua acurácia e por fim, ele é salvo para reutilização e predições futuras.
+
+    ![Evidencia](./evidencias/curso_aws_sagemaker/sec9/rede_neural.png)
+
+    Resumo da arquitetura da rede neural criada:
+
+    ![Evidencia](./evidencias/curso_aws_sagemaker/sec9/reded_neural_summary.png)
+
+    - `dense_9`: Primeira camada oculta com 397 neurônios e função de ativação ReLU.
+    - `dense_10`: Segunda camada oculta com 397 neurônios e função de ativação ReLU.
+    - `dense_11`: Camada de saída com 10 neurônios e função de ativação softmax (para classificação multiclasse).
+
+- **Seção 10: Endpoint externo**<br> Na seção 10 se trabalha com o conceito de **Endpoint externo**, que nesse contexto é uma interface que conecta a aplicação do cliente a um modelo de Machine Learning implantado na nuvem.
+
+    Nessa seção, utiliza-se um endpoint externo para realizar previsões com um modelo treinado e implantado no Amazon SageMaker.
+
+    O modelo treinado usando o algoritmo `XGBoost` é utilizado para fazer previsões.
+
+    ![Evidencia](./evidencias/curso_aws_sagemaker/sec10/endpoint_externo.png)
+
+- **Seção 11: Autopilot - aprendizagem automática**<br> O `SageMaker Autopilot` automatiza o processo de treinamento de modelos de Machine Learning. Ele permite que você envie **dados brutos** e obtenha um **modelo treinado** com base nesses dados, sem a necessidade de conhecimento profundo sobre algoritmos ou engenharia de features.
+
+    O que você precisa fazer é somente configurar o experimento, como o bucket, o dataset, variável alvo, o tipo de problema machine learning, tempo máximo de execução e entre outras configurações que você geralmente realiza, porém sendo preciso 0 linhas de código.   
+
+    ![Evidencia](./evidencias/curso_aws_sagemaker/sec11/experiment.png)
 
 
-- **Seção 09: Sagemaker com TensorFlow**<br>
+- **Seção 12: Anexo 1: Redes neurais artificiais**<br> As Redes neurais artificiais(RNAs) são modelos computacionais que tentam replicar o funcionamento do cérebro humano. As RNAs possuem as unidades conectadas chamadas de **neurônios**, a organização em **camadas** que processam dados para resolver problemas complexos como classificação, regressão, detecção de padrões e tomada de decisão.
+
+    Existem vários tipos de redes neurais como a simples, multicamadas e entre outras.
+
+    A rede **Perceptron Simples** é um modelo básicox om uma única camada de saída.
+
+    A rede **Perceptron Multicamadas(MLP)** consiste em várias camadas (entrada, ocultas, saída).
+
+    Durante o treinamento, a rede ajusta os pesos e os vieses para minimizar o erro. O conceito de **backpropagation** é um cálculo do gradiente do erro em relação aos pesos, usando o algoritmo do gradiente descendente.
+
+- **Seção 13: Anexo 2: Redes neurais convolucionais**<br> As redes neurais convolucionais são projetadas para lidar com dados com grande estrutura de grade. Um ótimo exemplo, são imagens, vídeos, voz entre outros.
+
+    As `CNNs` possuem processos importantes de destacar como o `Pooling(amostragem)`, que tem como objetivo reduzir a **dimensionalidade da entrada**, mantendo as características mais importantes. Ele tem uma função muito importante em diminuir o número de parâmetros e cálculos, ajudando a evitar **overfitting**.
+
+    Outro processo, é o `Flattening`, que é necessário para tratar da saída de uma camada convolucional ou de uma camada de pooling (geralmente em **formato matricial ou tensorial**) é convertida em um **vetor unidimensional**.
 
 
-- **Seção 10: Endpoint externo**<br>
+- **Seção 14: Anexo 3: Redes neurais recorrentes**<br> As redes neurais recorrentes são projetadas para lidar com dados **sequenciais e temporais**, como séries temporais, texto, áudio ou vídeo. A principal caracteristica delas é a capacidade de eter informações sobre entradas anteriores ao processar uma nova entrada, permitindo que a rede tenha uma **"memória" de curto prazo**.
 
+    Um fato importante sobre as redes neurais recorrentes, é que durante o treinamento, os gradientes podem se tornar **extremamente pequenos** (desaparecer) ou **extremamente grandes** (explodir), dificultando o aprendizado de dependências temporais de longo prazo.
 
-- **Seção 12: Anexo 1: Redes neurais artificiais**<br>
+    AS `LSTMs(Long Short-Term Memory)` são um tipo de RNN que usa células de memória e mecanismos de "portas" para aprender dependências de longo prazo e curto prazo. 
 
-
-- **Seção 13: Anexo 2: Redes neurais convolucionais**<br>
-
-
-- **Seção 14: Anexo 3: Redes neurais recorrentes**<br>
-
-
-### ➣ Curso: Machine Learning e Data Science com Python de A a Z
+### 🧠 Curso: Machine Learning e Data Science com Python de A a Z
 
 - **Seção 14: Regressão Linear**<br> A regressão linear é um conceito estatístico que busca realizar a modelagem da relação entre variáveis numéricas, sendo separadas em uma `variável dependente(alvo)` e `variáveis independentes(preditores)`. O principal objetivo é encontrar a **melhor linha reta** que mostre a relação entre essas variáveis e dizer o quão bem a variável dependente pode ser **prevista** pelas variáveis preditoras.
 
     - **Regressão Linear Simples:** esse tipo de regressão linear relaciona uma variável dependendete a uma única variável independente.
 
-        ![Evidencia](./evidencias/sec14/regressao_linear_simples.png)
+        ![Evidencia](./evidencias/curso_machine_learning_e_data_science/sec14/regressao_linear_simples.png)
 
     Prever o custo de um plano de saúde baseado na idade de uma pessoa. O modelo foi criado tendo como variável dependente(y) o `custo` e independente(X) `idade`.
 
@@ -241,11 +287,11 @@ No diretório de exercícios, coloquei alguns noteboooks que eu trabalhei durant
 
         Selecionando as variáveis independentes e a dependente(`price`). A ideia é prever o preço de uma casa com base em diversas outras variáveis.
 
-        ![Evidencia](./evidencias/sec14/regressao_multipla_variaveis.png)
+        ![Evidencia](./evidencias/curso_machine_learning_e_data_science/sec14/regressao_multipla_variaveis.png)
 
         Previsões e `Mean Absolute Error`
 
-        ![Evidencia](./evidencias/sec14/regressao_multipla.png)
+        ![Evidencia](./evidencias/curso_machine_learning_e_data_science/sec14/regressao_multipla.png)
 
 - **Seção 15: Outros tipos de regressão**<br>
 
@@ -253,19 +299,19 @@ No diretório de exercícios, coloquei alguns noteboooks que eu trabalhei durant
 
         O parâmetro `degree = 4`permite que o modelo se ajuste bem, mas em outros cenários pode gerar overfitting em dados mais ruidosos.
 
-        ![Evidencia](./evidencias/sec15/regressao_polinomial.png)
+        ![Evidencia](./evidencias/curso_machine_learning_e_data_science/sec15/regressao_polinomial.png)
 
-        ![Evidencia](./evidencias/sec15/regressao_polinomial2.png)
+        ![Evidencia](./evidencias/curso_machine_learning_e_data_science/sec15/regressao_polinomial2.png)
 
     - **Regressão com Random Forest**<br> O `Random Forest` faz parte do que se chama `Aprendizado em Conjunto(Ensemble Learning)`, que basicamente significa consultar diversas fontes para se obter um resultado mais preciso e robusto. O Random Forest utiliza de várias `árvores de decisão` para construir um algoritmo mais "forte". Além disso, utiliza a média(regressão) ou votos da maioria(classificação) para se obter uma resposta final.
 
-        ![Evidencia](./evidencias/sec15/random_forest.png)
+        ![Evidencia](./evidencias/curso_machine_learning_e_data_science/sec15/random_forest.png)
 
         A linha vermelha, que são os `degraus` passam próximas aos pontos reais, indicando que o modelo conseguiu capturar bem as variações presentes nos dados.
 
     - **Regressão com Redes Neurais Artificiais**<br> As RNAs são amplamente utilizadas para resolver problemas complexos, nesse caso, a regressão. Os dados de entrada (X) são escalados para melhorar o desempenho do treinamento, eles percorrem cada camada da rede realizando os cálculos de erros e ajuste de pesos.
 
-        ![Evidencia](./evidencias/sec15/regressao_rna.png)
+        ![Evidencia](./evidencias/curso_machine_learning_e_data_science/sec15/regressao_rna.png)
 
         O modelo parece ter se ajustado bem aos dados reais, dado que a linha vermelha segue o padrão dos pontos azuis.
 
@@ -296,13 +342,13 @@ No diretório de exercícios, coloquei alguns noteboooks que eu trabalhei durant
     - **Utilizando o Apriori:**<br>
         Transformando o dataframe para uma lista e definindo as regras do **Apriori(Support, Confidence e Lift)**.
 
-        ![Evidencia](./evidencias/sec17/apriori1.png)
+        ![Evidencia](./evidencias/curso_machine_learning_e_data_science/sec17/apriori1.png)
 
         **Extração das regras** do algoritmo e transformando em um **dataframe**.
 
-        ![Evidencia](./evidencias/sec17/apriori2.png)
+        ![Evidencia](./evidencias/curso_machine_learning_e_data_science/sec17/apriori2.png)
 
-        ![Evidencia](./evidencias/sec17/apriori3.png)
+        ![Evidencia](./evidencias/curso_machine_learning_e_data_science/sec17/apriori3.png)
 
 - **Seção 20: Agrupamento com K-Means**<br> Agrupamento ou `clusterização` é uma técnica muito utilizada em machine learning para identificar grupos (ou `clusters`) de dados que possuem **características semelhantes**. 
 
@@ -312,25 +358,25 @@ No diretório de exercícios, coloquei alguns noteboooks que eu trabalhei durant
 
     - **Utilizando o K-means:**<br> Utilizando uma pequena base que representa idades e salários, apliquei o algoritmo `K-means` para entender como seriam dividido **3 clusters**. A imagem mostra que foram criados 3 clusters com a média das idades sendo o centróide e a média dos salários recebidos.
 
-        ![Evidencia](./evidencias/sec20/kmeans1.png)
+        ![Evidencia](./evidencias/curso_machine_learning_e_data_science/sec20/kmeans1.png)
 
         Os pontos maiores azuis são os centróides dos clusters.
 
-        ![Evidencia](./evidencias/sec20/kmeans2.png)
+        ![Evidencia](./evidencias/curso_machine_learning_e_data_science/sec20/kmeans2.png)
 
         Utilizando bases de dados randômicas foi possível plotar um gráfico que permitiu visualizar muito claramente a **separação de dados em cada cluster e os seus centróides**.
 
-       ![Evidencia](./evidencias/sec20/kmeans3.png)
+       ![Evidencia](./evidencias/ curso_machine_learning_e_data_science/sec20/kmeans3.png)
 
 - **Seção 21: Outros algoritmos de agrupamento**<br> Nesta seção aprendemos sobre o agrupamento hierárquico, que basicamente tem como objetivo estabelecer uma **hierarquia de de agrupamentos**, onde é criada uma estrutura em forma de árvore que indica o número de clusters
 
     O `dendrograma`(árvore de clusters) exibe os grupos formados pelo agrupamento hierárquico em cada passo e em seus níveis de similaridade.
 
-    ![Evidencia](./evidencias/sec21/dendrograma_exemplo.png)
+    ![Evidencia](./evidencias/curso_machine_learning_e_data_science/sec21/dendrograma_exemplo.png)
 
     Scatter Plot que evidencia os clusters aglomerativos criados em cima de uma base de cartão de crédito, onde o Eixo X representa o limite disponibilizado no cartão de crédito, e o Eixo Y o total gasto pelo cliente(Os dados estão normalizados).
 
-    ![Evidencia](./evidencias/sec21/scatter_plot.png)
+    ![Evidencia](./evidencias/curso_machine_learning_e_data_science/sec21/scatter_plot.png)
 
     - **Clientes conservadores (amarelo):** Baixo gasto apesar do alto limite disponível.
     - **Clientes equilibrados (rosa):** Usam uma parte significativa de seus limites de forma consistente.
@@ -340,24 +386,24 @@ No diretório de exercícios, coloquei alguns noteboooks que eu trabalhei durant
 
     Ele é mais rápido e geralmente apresenta melhores resultados do que o K-Means, encontrando padrões não lineares e sendo mais robusto contra outliers.
 
-    ![Evidencia](./evidencias/sec21/dbscan.png)
+    ![Evidencia](./evidencias/curso_machine_learning_e_data_science/sec21/dbscan.png)
 
-    ![Evidencia](./evidencias/sec21/scatter_plot_dbscan.png)
+    ![Evidencia](./evidencias/curso_machine_learning_e_data_science/sec21/scatter_plot_dbscan.png)
 
 
 - **Seção 27: Seleção de atributos**<br> A seleção de atributos é muito importante para a clusterização e machine learnnig no geral, pois o seu objetivo é **identificar os atributos mais relevantes** que influenciam os padrões ou comportamentos dos dados, reduzindo a dimensionalidade e melhorando a interpretabilidade.
 
     Considerando uma análise onde queremos prever o salário de uma pessoa, vamos selecionar somente os atributos com o `threshold mínimo de 0.05` e utilizar o algortimo de `Low Variance` em cima disso.
 
-    ![Evidencia](./evidencias/sec27/low_variance.png)
+    ![Evidencia](./evidencias/curso_machine_learning_e_data_science/sec27/low_variance.png)
 
     Criação de um dataframe com somente os índices selecionados, eles vão auxiliar nossa análise.
 
-    ![Evidencia](./evidencias/sec27/df_low_variance.png)
+    ![Evidencia](./evidencias/curso_machine_learning_e_data_science/sec27/df_low_variance.png)
 
     Depois de realizar alguns processos, obtivemos esse modelo com **atributos selecionados** e **dimensionalidade reduzida**.
 
-    ![Evidencia](./evidencias/sec27/low_variance2.png)
+    ![Evidencia](./evidencias/curso_machine_learning_e_data_science/sec27/low_variance2.png)
 
 - **Seção 28: Redução de dimensionalidade**<br> A **redução de dimensionalidade** é uma técnica de análise de dados e estatística para reduzir o número de variáveis aleatórias que serão inseridas em um modelo para treino, mantendo as suas **características essenciais**.
 
@@ -372,22 +418,24 @@ No diretório de exercícios, coloquei alguns noteboooks que eu trabalhei durant
 
     Na imagem abaixo é possível observar que o algoritmo fez uma combinação de atributos, e o que eram 14, viraram 6 atributos, reduzindo a dimensionalidade.
 
-    ![Evidencia](./evidencias/sec28/pca1.png)
+    ![Evidencia](./evidencias/curso_machine_learning_e_data_science/sec28/pca1.png)
 
     O modelo teve uma acurácia muito boa.
 
-    ![Evidencia](./evidencias/sec28/pca2.png)
+    ![Evidencia](./evidencias/curso_machine_learning_e_data_science/sec28/pca2.png)
 
 - **Seção 29: Detecção de Outliers**<br> Um `Outlier` é um valor anormal, ou seja, fora do padrão(afastados da média). Esse valor anormal pode ser decorrente do acaso, **erro no preenchimento dos dados ou fraudes**, sendo necessário tratá-los seja **removendo o registro**, o que pode influenciar negativamente na base de dados, **substituí-lo por outro valor**, ou **não fazer nada**.
 
     Na imagem abaixo é possível visualizar os outliers(pontos) que representam valores anormais relacionados a idades em um dataframe, provavelmente decorrente de erros de digitação ou de cálculo.
 
-    ![Evidencia](./evidencias/sec29/boxplot.png)
+    ![Evidencia](./evidencias/curso_machine_learning_e_data_science/sec29/boxplot.png)
 
     Scatter plot que mostra a relação entre a idade e a pontuação de uma pessoa.
 
-    ![Evidencia](./evidencias/sec29/scatter.png)
+    ![Evidencia](./evidencias/curso_machine_learning_e_data_science/sec29/scatter.png)
 
 # 👨🏼‍🎓 Certificados
 
 - Certificado do Curso **Machine Learning com Amazon AWS e SageMaker**
+
+    ![Evidencia](./certificados/aws_e_sagemaker.jpg)
