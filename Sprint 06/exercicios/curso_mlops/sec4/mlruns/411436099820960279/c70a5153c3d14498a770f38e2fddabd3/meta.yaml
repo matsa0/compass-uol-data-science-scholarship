@@ -1,0 +1,15 @@
+artifact_uri: file:///home/matsa/Documents/curso_mlops_mlflow/sec4/mlruns/411436099820960279/c70a5153c3d14498a770f38e2fddabd3/artifacts
+end_time: 1738764761388
+entry_point_name: ''
+experiment_id: '411436099820960279'
+lifecycle_stage: active
+run_id: c70a5153c3d14498a770f38e2fddabd3
+run_name: useful-duck-561
+run_uuid: c70a5153c3d14498a770f38e2fddabd3
+source_name: ''
+source_type: 4
+source_version: ''
+start_time: 1738764758321
+status: 3
+tags: []
+user_id: matsa

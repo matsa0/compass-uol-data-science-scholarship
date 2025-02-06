@@ -1,0 +1,15 @@
+artifact_uri: file:///home/matsa/Documents/curso_mlops_mlflow/sec4/mlruns/760613153999428202/a896944b34254e80b5f50226ef12ee50/artifacts
+end_time: 1738777285029
+entry_point_name: ''
+experiment_id: '760613153999428202'
+lifecycle_stage: active
+run_id: a896944b34254e80b5f50226ef12ee50
+run_name: upset-loon-439
+run_uuid: a896944b34254e80b5f50226ef12ee50
+source_name: ''
+source_type: 4
+source_version: ''
+start_time: 1738777241977
+status: 3
+tags: []
+user_id: matsa

@@ -1,0 +1,15 @@
+artifact_uri: file:///home/matsa/Documents/curso_mlops_mlflow/sec4/mlruns/760613153999428202/236bf1e266564e5092d3090fd963cc18/artifacts
+end_time: 1738776297373
+entry_point_name: ''
+experiment_id: '760613153999428202'
+lifecycle_stage: active
+run_id: 236bf1e266564e5092d3090fd963cc18
+run_name: dazzling-grouse-496
+run_uuid: 236bf1e266564e5092d3090fd963cc18
+source_name: ''
+source_type: 4
+source_version: ''
+start_time: 1738776260672
+status: 3
+tags: []
+user_id: matsa

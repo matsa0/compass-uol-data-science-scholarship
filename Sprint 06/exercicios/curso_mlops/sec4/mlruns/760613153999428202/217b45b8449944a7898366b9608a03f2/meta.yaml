@@ -1,0 +1,15 @@
+artifact_uri: file:///home/matsa/Documents/curso_mlops_mlflow/sec4/mlruns/760613153999428202/217b45b8449944a7898366b9608a03f2/artifacts
+end_time: 1738776224570
+entry_point_name: ''
+experiment_id: '760613153999428202'
+lifecycle_stage: active
+run_id: 217b45b8449944a7898366b9608a03f2
+run_name: defiant-finch-919
+run_uuid: 217b45b8449944a7898366b9608a03f2
+source_name: ''
+source_type: 4
+source_version: ''
+start_time: 1738776191593
+status: 3
+tags: []
+user_id: matsa

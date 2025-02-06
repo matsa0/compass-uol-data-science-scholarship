@@ -1,0 +1,15 @@
+artifact_uri: file:///home/matsa/Documents/curso_mlops_mlflow/sec4/mlruns/760613153999428202/a41d62adabdd4b9e872bdb2b5e10b89d/artifacts
+end_time: 1738776917618
+entry_point_name: ''
+experiment_id: '760613153999428202'
+lifecycle_stage: active
+run_id: a41d62adabdd4b9e872bdb2b5e10b89d
+run_name: likeable-trout-303
+run_uuid: a41d62adabdd4b9e872bdb2b5e10b89d
+source_name: ''
+source_type: 4
+source_version: ''
+start_time: 1738776873014
+status: 3
+tags: []
+user_id: matsa

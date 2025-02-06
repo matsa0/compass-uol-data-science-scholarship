@@ -1,0 +1,6 @@
+artifact_location: file:///home/matsa/Documents/curso_mlops_mlflow/sec4/mlruns/760613153999428202
+creation_time: 1738775452870
+experiment_id: '760613153999428202'
+last_update_time: 1738775452870
+lifecycle_stage: active
+name: DLExperiment

@@ -1,0 +1,15 @@
+artifact_uri: file:///home/matsa/Documents/curso_mlops_mlflow/sec4/mlruns/760613153999428202/50f7963a05c64622977e1d0e26f3388a/artifacts
+end_time: 1738776162347
+entry_point_name: ''
+experiment_id: '760613153999428202'
+lifecycle_stage: active
+run_id: 50f7963a05c64622977e1d0e26f3388a
+run_name: adventurous-loon-747
+run_uuid: 50f7963a05c64622977e1d0e26f3388a
+source_name: ''
+source_type: 4
+source_version: ''
+start_time: 1738776134471
+status: 3
+tags: []
+user_id: matsa

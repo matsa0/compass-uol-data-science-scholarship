@@ -1,0 +1,15 @@
+artifact_uri: file:///home/matsa/Documents/curso_mlops_mlflow/sec4/mlruns/760613153999428202/5c39db7cc2144082b293e432fdc022ab/artifacts
+end_time: 1738777549546
+entry_point_name: ''
+experiment_id: '760613153999428202'
+lifecycle_stage: active
+run_id: 5c39db7cc2144082b293e432fdc022ab
+run_name: calm-bear-801
+run_uuid: 5c39db7cc2144082b293e432fdc022ab
+source_name: ''
+source_type: 4
+source_version: ''
+start_time: 1738777504849
+status: 3
+tags: []
+user_id: matsa

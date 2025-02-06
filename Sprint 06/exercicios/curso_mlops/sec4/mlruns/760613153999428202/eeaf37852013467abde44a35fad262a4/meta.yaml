@@ -1,0 +1,16 @@
+artifact_uri: file:///home/matsa/Documents/curso_mlops_mlflow/sec4/mlruns/760613153999428202/eeaf37852013467abde44a35fad262a4/artifacts
+deleted_time: 1738775759289
+end_time: 1738775518990
+entry_point_name: ''
+experiment_id: '760613153999428202'
+lifecycle_stage: deleted
+run_id: eeaf37852013467abde44a35fad262a4
+run_name: brawny-rook-812
+run_uuid: eeaf37852013467abde44a35fad262a4
+source_name: ''
+source_type: 4
+source_version: ''
+start_time: 1738775494917
+status: 4
+tags: []
+user_id: matsa

@@ -1,0 +1,15 @@
+artifact_uri: file:///home/matsa/Documents/curso_mlops_mlflow/sec4/mlruns/760613153999428202/411a83d0377d4bd4879783d8ef8b5348/artifacts
+end_time: 1738775652603
+entry_point_name: ''
+experiment_id: '760613153999428202'
+lifecycle_stage: active
+run_id: 411a83d0377d4bd4879783d8ef8b5348
+run_name: burly-shad-72
+run_uuid: 411a83d0377d4bd4879783d8ef8b5348
+source_name: ''
+source_type: 4
+source_version: ''
+start_time: 1738775630517
+status: 3
+tags: []
+user_id: matsa

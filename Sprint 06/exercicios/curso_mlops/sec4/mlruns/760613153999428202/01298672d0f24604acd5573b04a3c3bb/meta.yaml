@@ -1,0 +1,16 @@
+artifact_uri: file:///home/matsa/Documents/curso_mlops_mlflow/sec4/mlruns/760613153999428202/01298672d0f24604acd5573b04a3c3bb/artifacts
+deleted_time: 1738775759284
+end_time: 1738775453005
+entry_point_name: ''
+experiment_id: '760613153999428202'
+lifecycle_stage: deleted
+run_id: 01298672d0f24604acd5573b04a3c3bb
+run_name: melodic-dolphin-480
+run_uuid: 01298672d0f24604acd5573b04a3c3bb
+source_name: ''
+source_type: 4
+source_version: ''
+start_time: 1738775452994
+status: 4
+tags: []
+user_id: matsa

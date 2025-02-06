@@ -1,0 +1,15 @@
+artifact_uri: file:///home/matsa/Documents/curso_mlops_mlflow/sec4/mlruns/346310501385464343/8f0ce2208a5a4978aad2283a025d2c76/artifacts
+end_time: 1738764343495
+entry_point_name: ''
+experiment_id: '346310501385464343'
+lifecycle_stage: active
+run_id: 8f0ce2208a5a4978aad2283a025d2c76
+run_name: judicious-wasp-910
+run_uuid: 8f0ce2208a5a4978aad2283a025d2c76
+source_name: ''
+source_type: 4
+source_version: ''
+start_time: 1738764339589
+status: 3
+tags: []
+user_id: matsa

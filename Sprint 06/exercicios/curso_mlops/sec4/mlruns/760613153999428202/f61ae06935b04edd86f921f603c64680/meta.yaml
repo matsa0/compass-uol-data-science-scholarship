@@ -1,0 +1,15 @@
+artifact_uri: file:///home/matsa/Documents/curso_mlops_mlflow/sec4/mlruns/760613153999428202/f61ae06935b04edd86f921f603c64680/artifacts
+end_time: 1738777410246
+entry_point_name: ''
+experiment_id: '760613153999428202'
+lifecycle_stage: active
+run_id: f61ae06935b04edd86f921f603c64680
+run_name: secretive-boar-66
+run_uuid: f61ae06935b04edd86f921f603c64680
+source_name: ''
+source_type: 4
+source_version: ''
+start_time: 1738777362469
+status: 3
+tags: []
+user_id: matsa

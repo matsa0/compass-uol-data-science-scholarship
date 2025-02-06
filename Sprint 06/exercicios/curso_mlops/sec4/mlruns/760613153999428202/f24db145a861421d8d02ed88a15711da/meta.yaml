@@ -1,0 +1,15 @@
+artifact_uri: file:///home/matsa/Documents/curso_mlops_mlflow/sec4/mlruns/760613153999428202/f24db145a861421d8d02ed88a15711da/artifacts
+end_time: 1738776461829
+entry_point_name: ''
+experiment_id: '760613153999428202'
+lifecycle_stage: active
+run_id: f24db145a861421d8d02ed88a15711da
+run_name: honorable-gnu-556
+run_uuid: f24db145a861421d8d02ed88a15711da
+source_name: ''
+source_type: 4
+source_version: ''
+start_time: 1738776418284
+status: 3
+tags: []
+user_id: matsa

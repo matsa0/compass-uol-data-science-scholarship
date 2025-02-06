@@ -1,0 +1,15 @@
+artifact_uri: file:///home/matsa/Documents/curso_mlops_mlflow/sec4/mlruns/760613153999428202/f7e37a776a3b4a3d80833b5d9fc85d96/artifacts
+end_time: 1738776374548
+entry_point_name: ''
+experiment_id: '760613153999428202'
+lifecycle_stage: active
+run_id: f7e37a776a3b4a3d80833b5d9fc85d96
+run_name: gifted-shad-82
+run_uuid: f7e37a776a3b4a3d80833b5d9fc85d96
+source_name: ''
+source_type: 4
+source_version: ''
+start_time: 1738776334896
+status: 3
+tags: []
+user_id: matsa

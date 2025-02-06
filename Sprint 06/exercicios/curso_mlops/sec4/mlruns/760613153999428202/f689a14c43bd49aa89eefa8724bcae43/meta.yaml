@@ -1,0 +1,15 @@
+artifact_uri: file:///home/matsa/Documents/curso_mlops_mlflow/sec4/mlruns/760613153999428202/f689a14c43bd49aa89eefa8724bcae43/artifacts
+end_time: 1738776873009
+entry_point_name: ''
+experiment_id: '760613153999428202'
+lifecycle_stage: active
+run_id: f689a14c43bd49aa89eefa8724bcae43
+run_name: welcoming-slug-470
+run_uuid: f689a14c43bd49aa89eefa8724bcae43
+source_name: ''
+source_type: 4
+source_version: ''
+start_time: 1738776831423
+status: 3
+tags: []
+user_id: matsa

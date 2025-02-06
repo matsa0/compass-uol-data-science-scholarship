@@ -1,0 +1,15 @@
+artifact_uri: file:///home/matsa/Documents/curso_mlops_mlflow/sec4/mlruns/760613153999428202/ed8e645bc7f04970a0db1494b3b83a0d/artifacts
+end_time: 1738776191590
+entry_point_name: ''
+experiment_id: '760613153999428202'
+lifecycle_stage: active
+run_id: ed8e645bc7f04970a0db1494b3b83a0d
+run_name: charming-stag-515
+run_uuid: ed8e645bc7f04970a0db1494b3b83a0d
+source_name: ''
+source_type: 4
+source_version: ''
+start_time: 1738776162351
+status: 3
+tags: []
+user_id: matsa

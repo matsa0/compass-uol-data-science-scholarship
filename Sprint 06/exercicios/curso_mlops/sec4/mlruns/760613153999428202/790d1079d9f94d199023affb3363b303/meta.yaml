@@ -1,0 +1,15 @@
+artifact_uri: file:///home/matsa/Documents/curso_mlops_mlflow/sec4/mlruns/760613153999428202/790d1079d9f94d199023affb3363b303/artifacts
+end_time: 1738777005974
+entry_point_name: ''
+experiment_id: '760613153999428202'
+lifecycle_stage: active
+run_id: 790d1079d9f94d199023affb3363b303
+run_name: delightful-wren-509
+run_uuid: 790d1079d9f94d199023affb3363b303
+source_name: ''
+source_type: 4
+source_version: ''
+start_time: 1738776962839
+status: 3
+tags: []
+user_id: matsa

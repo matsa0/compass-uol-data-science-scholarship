@@ -1,0 +1,15 @@
+artifact_uri: file:///home/matsa/Documents/curso_mlops_mlflow/sec4/mlruns/760613153999428202/e083e612eb1d49fab8305b6520fb3e7d/artifacts
+end_time: 1738777241973
+entry_point_name: ''
+experiment_id: '760613153999428202'
+lifecycle_stage: active
+run_id: e083e612eb1d49fab8305b6520fb3e7d
+run_name: righteous-foal-562
+run_uuid: e083e612eb1d49fab8305b6520fb3e7d
+source_name: ''
+source_type: 4
+source_version: ''
+start_time: 1738777202364
+status: 3
+tags: []
+user_id: matsa

@@ -1,0 +1,15 @@
+artifact_uri: file:///home/matsa/Documents/curso_mlops_mlflow/sec4/mlruns/760613153999428202/7aaf8247c721470dbcf17952c5ab4deb/artifacts
+end_time: 1738776418279
+entry_point_name: ''
+experiment_id: '760613153999428202'
+lifecycle_stage: active
+run_id: 7aaf8247c721470dbcf17952c5ab4deb
+run_name: nervous-crab-70
+run_uuid: 7aaf8247c721470dbcf17952c5ab4deb
+source_name: ''
+source_type: 4
+source_version: ''
+start_time: 1738776374552
+status: 3
+tags: []
+user_id: matsa

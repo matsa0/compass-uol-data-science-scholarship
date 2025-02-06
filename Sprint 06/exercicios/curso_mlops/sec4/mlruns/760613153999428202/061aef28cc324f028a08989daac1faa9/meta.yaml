@@ -1,0 +1,16 @@
+artifact_uri: file:///home/matsa/Documents/curso_mlops_mlflow/sec4/mlruns/760613153999428202/061aef28cc324f028a08989daac1faa9/artifacts
+deleted_time: 1738775759289
+end_time: 1738775470823
+entry_point_name: ''
+experiment_id: '760613153999428202'
+lifecycle_stage: deleted
+run_id: 061aef28cc324f028a08989daac1faa9
+run_name: righteous-cub-508
+run_uuid: 061aef28cc324f028a08989daac1faa9
+source_name: ''
+source_type: 4
+source_version: ''
+start_time: 1738775470610
+status: 4
+tags: []
+user_id: matsa

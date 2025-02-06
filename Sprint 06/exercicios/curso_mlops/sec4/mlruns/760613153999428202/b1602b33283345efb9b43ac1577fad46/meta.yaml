@@ -1,0 +1,15 @@
+artifact_uri: file:///home/matsa/Documents/curso_mlops_mlflow/sec4/mlruns/760613153999428202/b1602b33283345efb9b43ac1577fad46/artifacts
+end_time: 1738777124008
+entry_point_name: ''
+experiment_id: '760613153999428202'
+lifecycle_stage: active
+run_id: b1602b33283345efb9b43ac1577fad46
+run_name: handsome-conch-438
+run_uuid: b1602b33283345efb9b43ac1577fad46
+source_name: ''
+source_type: 4
+source_version: ''
+start_time: 1738777085161
+status: 3
+tags: []
+user_id: matsa

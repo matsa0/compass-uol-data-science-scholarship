@@ -75,7 +75,6 @@ Na seção 4 vi sobre o `NLTK` que é uma biblioteca Python de Processamento de 
 
 - **Seção 6: Machine Learning e Deep Learning para NLP na Prática**<br>
     
-
     Nesta seção desenvolvemos o treinamento de uma `Rede Neural`. Foi interessante para relembrar alguns importantes conceitos relacionados, como por exemplo:
 
     Hiperparâmetros:
@@ -213,14 +212,76 @@ Na seção 10 trablhei com o `Spark` utilizando um cluster no **Databricks Commu
 
 ### 🧠 Curso: Face Recognition with Machine Learning + Deploy Flask App
 
+
 ### 🧠 Curso: MLOps: Implantação e Operação de Modelos de Machine Learning
 
+- **Seção 1: Introdução**<br>
+Criar um bom modelo machine learning já é um grande desafio, porém **implantá-lo** e **mantê-lo em produção** é um desafio ainda maior. 
 
+    É interessante ressaltar que o ciclo de vida de um **modelo** é diferente do ciclo de vida do **código** e do ciclo de vida dos **dados**. Modelos são temporários, isso pois eles dependem de dados e dados mudam com o tempo.
+
+    Para falar de `MLOps`, primeiro temos que contextualizar o `DevOps`. DevOps é a integração de **Desenvolvimento** e **Operações**, de forma que as duas áreas possam trabalhar em conjunto para automatizar o processo de implantação com entrega contínua. O MLOps nada mais é que o **DevOps para Machine Learning**, uma prática que combina o desenvolvimento de aplicações de machine learning com a implantação e operações do sistema. 
+
+    Os **níveis** MLOPS:
+    - `Nível 0`: Manual
+    - `Nível 1`: Automatização do pipeline de Machine Learning
+    - `Nível 2`: Automatização da Integração Contínua e da Entrega Contínua
+
+- **Seção 2: Apresentando MLFlow**<br>
+Nesta seção aprendi sobre o `MLFlow`, uma plataforma de código aberto para **gerenciamento do ciclo de vida** de modelos Machine Learning. Ele facilita o gerenciamento do fluxo de trabalho para treinamento, rastreamento de experimentos e produção de modelos. 
+
+- **Seção 4: Criando e Registrando Modelos**<br>
+Criação do meu **primeiro experimento MLFlow** utilizando um modelo **Naive Bayes**:
+
+    ![Evidencia](./evidencias/curso_mlops/sec4/first_experiment.png)
+
+    É possível visualizar o modelo criado no experimento através do diretório `mlruns`, onde você navega pelas pastas e encontra um diretório com a **chave do modelo treinado**. O diretório contém informações sobre **artefatos, métricas, patâmetros e tags do modelo criado**. No exemplo abaixo, a acurácia que foi registrada no experimento está dentro da pasta metrics.
+
+    ![Evidencia](./evidencias/curso_mlops/sec4/mlruns.png)
+
+    No seu ambiente virtual, digite o comando `mlflow ui` e uma interface local do **mlflow** irá rodar. Lá é possível ver todas as informações a respeito dos seus experimentos criados, metricas, parâmetros, entre outros.
+
+    ![Evidencia](./evidencias/curso_mlops/sec4/mlflow_ui.png)
+
+    Experimento com mais métricas:
+
+    ![Evidencia](./evidencias/curso_mlops/sec4/metrics_mlflow_ui.png)
+
+    Os artefatos incluem o modelo salvo, o enviroment, gráficos gerados e podem conter outros tipos de artefatos.
+
+    ![Evidencia](./evidencias/curso_mlops/sec4/artifacts.png)
+
+    Outra funcionalidade interessante de se explorar ao treinar modelos com MLFlow, é testar **diferentes combinações** de **hiperparâmetros** e visualizar detalhadamente os resultados obtidos.
+
+    No exemplo abaixo, configurei um experimento de **Deep Learning com Keras**, onde selecionei alguns hiperparâmetros para serem testados automaticamente:
+
+    ![Evidencia](./evidencias/curso_mlops/sec4/hyperparametes_dl.png)
+
+    Os diversos modelos criados no experimento MLFlow:
+
+    ![Evidencia](./evidencias/curso_mlops/sec4/dl_models.png)
+
+    Ao clicar em qualquer um desses modelos, é possível visualizar informações detalhadas, como os hiperparâmetros utilizados, métricas obtidas, tags e outros detalhes importantes para análise e comparação.
+
+- **Seção 5: Servindo Modelos on premise / local**<br>
+Na seção 5 aprendi como servir modelos, o que na prática significa **disponibilizar modelos** de machine learning **localmente** em vez de utilizar serviços em nuvem.
+
+    É interessante disponibilizar modelos após a etapa de experimentos, onde você encontrou o melhor modelo e pode permitir que outras aplicações, usuários ou sistemas possam aproveitar do desempenho do modelo criado para tomar decisões ou gerar insights.
+
+    Com o comando `mlflow models serve --env-manager local -m runs:/8f0ce2208a5a4978aad2283a025d2c76/RFmodel -p 2345` foi possível servir o modelo localmente, sendo **8f0ce2208a5a4978aad2283a025d2c76** o ID do modelo, **RFmodel** seu nome, e **2345** a porta.
+
+    ![Evidencia](./evidencias/curso_mlops/sec5/request.png)
+
+    Com o modelo servido locamente, é possível fazer fazer uma requisição **HTTP POST**  enviando dados no formato JSON para **obter previsões de um modelo** de machine learning que está sendo servido.
 
 # 👨🏼‍🎓 Certificados
 
 ### 🧠 Curso: Formação Processamento de Linguagem Natural, LLMs e Gen AI
 
+![Certificado](./certificados/curso_formacao_processamento_nlp/certificado_curso_processamento_nlp.jpg)
+
 ### 🧠 Curso: Face Recognition with Machine Learning + Deploy Flask App
 
 ### 🧠 Curso: MLOps: Implantação e Operação de Modelos de Machine Learning
+
+![Certificado](./certificados/curso_mlops/certificado_curso_mlops.jpg)

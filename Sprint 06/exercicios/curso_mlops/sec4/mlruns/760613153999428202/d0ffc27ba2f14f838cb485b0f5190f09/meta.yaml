@@ -1,0 +1,15 @@
+artifact_uri: file:///home/matsa/Documents/curso_mlops_mlflow/sec4/mlruns/760613153999428202/d0ffc27ba2f14f838cb485b0f5190f09/artifacts
+end_time: 1738776831419
+entry_point_name: ''
+experiment_id: '760613153999428202'
+lifecycle_stage: active
+run_id: d0ffc27ba2f14f838cb485b0f5190f09
+run_name: defiant-goat-392
+run_uuid: d0ffc27ba2f14f838cb485b0f5190f09
+source_name: ''
+source_type: 4
+source_version: ''
+start_time: 1738776789023
+status: 3
+tags: []
+user_id: matsa

@@ -1,0 +1,15 @@
+artifact_uri: file:///home/matsa/Documents/curso_mlops_mlflow/sec4/mlruns/760613153999428202/aef507d18f3e49c8aff721fbbf5fca82/artifacts
+end_time: 1738777504845
+entry_point_name: ''
+experiment_id: '760613153999428202'
+lifecycle_stage: active
+run_id: aef507d18f3e49c8aff721fbbf5fca82
+run_name: rebellious-bee-974
+run_uuid: aef507d18f3e49c8aff721fbbf5fca82
+source_name: ''
+source_type: 4
+source_version: ''
+start_time: 1738777458738
+status: 3
+tags: []
+user_id: matsa

@@ -1,0 +1,15 @@
+artifact_uri: file:///home/matsa/Documents/curso_mlops_mlflow/sec4/mlruns/760613153999428202/63a07d22cc004e3dba752e7155986721/artifacts
+end_time: 1738777325994
+entry_point_name: ''
+experiment_id: '760613153999428202'
+lifecycle_stage: active
+run_id: 63a07d22cc004e3dba752e7155986721
+run_name: rambunctious-kit-601
+run_uuid: 63a07d22cc004e3dba752e7155986721
+source_name: ''
+source_type: 4
+source_version: ''
+start_time: 1738777285033
+status: 3
+tags: []
+user_id: matsa
