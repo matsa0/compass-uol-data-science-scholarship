@@ -2,7 +2,7 @@
     <strong>SPRINT 06</strong>
 </h1>
 
-# 🔗 Vídeo - [Desafio Sprint 06]
+# 🔗 Vídeo - [Desafio Sprint 06](https://compasso-my.sharepoint.com/:v:/r/personal/matheus_azevedo_pb_compasso_com_br/Documents/Sprint6_Video_Desafio_MatheusAzevedo.mp4?csf=1&web=1&e=m1w56h)
 
 # 📝 Exercícios
 
@@ -12,7 +12,11 @@
 
 ### 🧠 Curso: Face Recognition with Machine Learning + Deploy Flask App
 
+- Diretório com os notebooks trabalhados: [Clique aqui](./exercicios/curso_face_recognition/)
+
 ### 🧠 Curso: MLOps: Implantação e Operação de Modelos de Machine Learning
+
+- Diretório com os notebooks trabalhados: [Clique aqui](./exercicios/curso_mlops/)
 
 # 🔎 Evidências
 
@@ -211,6 +215,72 @@ Na seção 10 trablhei com o `Spark` utilizando um cluster no **Databricks Commu
 
 
 ### 🧠 Curso: Face Recognition with Machine Learning + Deploy Flask App
+
+- **Seção 2: Processamento de imagem com OpenCV**<br>
+Na seção 2 aprendi a trabalhar com o `OpenCV`, que basicamente é uma biblioteca voltada para **visão computacional** e **processamento de imagens**.
+
+    É importante entender como uma máquina entende uma imagem.
+    Uma imagem digital é representada como uma **matriz de pixels**, onde cada pixel contém informações sobre a **intensidade de cor**. Em imagens **em escala de cinza**:
+
+    - Valores baixos (próximos de 0) representam tons mais escuros (preto).
+    - Valores altos (próximos de 255) representam tons mais claros (branco).
+
+    É possível ver isso na prática:
+
+    ![Evidencia](./evidencias/curso_face_recognition/sec2/colors256pixels.png)
+
+    Em **imagens coloridas**, cada pixel contém três canais conhecidos como **RGB(Red, Green, Blue)**. Porém, o OpenCV lê imagens no formato **BGR (Blue, Green, Red)**. O OpenCV trabalha com a ordem dos canais invertidas por questões históricas e de eficiência, mas como a conversão para RGB é fácil, isso não impacta o processamento de imagens. É possível visualizar a difereça no exemplo abaixo:
+
+    ![Evidencia](./evidencias/curso_face_recognition/sec2/imgs_bgr_rgb.png)
+
+    Algo interessante de visualizar, é a separação dos canais **BGR**, onde é possível ver como a imagem reconhece cada cor. As partes com mais contraste(**mais amarelas**) de cada imagem representa a cor do respectivo canal.
+
+    ![Evidencia](./evidencias/curso_face_recognition/sec2/split_channels.png)
+
+    Outro conceito explorado foi o de `Face Detection` utilizando o `Haar Cascade Classifier`, um modelo pré-treinado que usa um arquivo XML especializado na **detecção de rostos frontais**. 
+
+    Os passos para utilizar o Haar são:
+    - Conversão para Escala de Cinza
+    - Carregamento do Classificador Pré-Treinado
+    - Detecção de Objetos na Imagem
+    - Desenho das detecções
+
+    ![Evidencia](./evidencias/curso_face_recognition/sec2/face_detection.png)
+
+
+- **Seção 3: Desenvolvendo um modelo de Reconhecimento Facial com Machine Learning**<br>
+
+    - `Crop Faces`: O processo de crop face (recorte de rosto) envolve detectar e extrair a região da face em uma imagem, para utilização em aplicações de reconhecimento facial.
+    
+        Antes:<br>
+            ![Evidencia](./evidencias/curso_face_recognition/sec3/before_crop_face.png)
+
+        Depois:<br>
+            ![Evidencia](./evidencias/curso_face_recognition/sec3/after_crop_face.png)
+
+    - `Eigenfaces`: Eigenfaces são um conjunto de autovetores de uma matriz de covariância formada por **imagens de faces (rostos)**. Esta é uma técnica que busca representar **padrões encontrados em imagens** de rostos utilizando o método PCA (Análise de Componentes Principais)*.
+
+        Com Eigenfaces, pode-se realizar o reconhecimento de rostos, ou seja, é possível dizer** a quem determinado rosto pertence**, baseado num banco de dados sobre esta pessoa previamente cadastrado.
+
+        É importante realizar a extração de características de imagens de rostos usando a técnica de Eigenfaces, que é baseada em Análise de Componentes Principais (PCA). A `mean face` é calculada como a média de todas as imagens do dataset. Essa face média representa o **"rosto típico"** do conjunto de dados.
+
+        Exemplo de mean face:
+
+        ![Evidencia](./evidencias/curso_face_recognition/sec3/mean_face.png)
+        
+        A Eigenface são os componentes principais extraídos das imagens faciais que capturam padrões de variação entre os rostos, permitindo representar faces de forma compacta e eficiente.
+
+        ![Evidencia](./evidencias/curso_face_recognition/sec3/eigenface.png)
+    
+    - `Pipeline`: Em várias partes dessa seção, foram realizados treinamentos de modelos e esses foram salvos através da biblioteca **pickle**. Um pipeline é criado com o objetivo de classificar o gênero de um rosto presente em uma imagem utilizando 3 modelos salvos.
+
+    - `Classificador Haar Cascade`: Detecta rostos na imagem convertida para escala de cinza. Retorna as coordenadas dos rostos detectados.
+
+    - `Modelo PCA`: Contém os componentes principais (Eigenfaces) e a face média do conjunto de treinamento. O rosto detectado é transformado para o espaço PCA, reduzindo a dimensionalidade dos dados antes da classificação.
+
+    - `Modelo SVM`: Um classificador SVM treinado para distinguir entre os gêneros masculino e feminino. Recebe a representação do rosto no espaço PCA e retorna a previsão do gênero, junto com a pontuação de confiança.
+
+        ![Evidencia](./evidencias/curso_face_recognition/sec3/result_pipeline.png)
 
 
 ### 🧠 Curso: MLOps: Implantação e Operação de Modelos de Machine Learning

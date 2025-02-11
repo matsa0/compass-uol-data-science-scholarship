@@ -1,43 +1,119 @@
 
-# Instruções
+<h1 align="center">
+    <strong>SPRINT 07</strong>
+</h1>
 
-Neste arquivo você irá apresentar suas entregas da Sprint corrente. Observe que existem 4 diretórios no exemplo: **exercícios**, **certificados** e **evidências**.
-
- - O diretório **exercícios** corresponde ao local onde você irá adicionar o código-fonte das atividades de codificação da Sprint, quando houver.
- - O diretório **evidências** você pode utilizar para adicionar imagens demonstrando a execução/resultados de atividades, quando necessário.
- - O diretório **certificados** é o local onde você irá armazenar os certificados dos cursos solicitados durante a sprint. O nome de cada certificado de corresponder ao título do curso.
- - O diretório **desafio** é o local onde você irá armazenar a resolução do que se pede no desafio, todos recursos que você considerar importante deverá está dentro desse diretório.
-
-Utilize o arquivo README.md da Sprint para organizar todas as suas entregas. Faça referência aos arquivos de código-fonte. Evite colocar código diretamente no Markdown pois dificulta nossa avaliação.
+# 🔗 Vídeo - [Desafio Sprint 07]()
 
 
-# Exercícios
+# 📝 Exercícios
+
+## 🧠 Curso: Credit Risk Modeling in Python
+
+### Section 1: Introduction
+
+### Section 2: Setting up the working enviroment
+
+### Section 3: Dataset description
+
+### Section 4: General preprocessing
+
+### Section 5: PD model: Data Preparation
+
+### Section 6: PD model estimation
+
+### Section 7: PD model validation
+
+### Section 8: Applying the PD model for decision making
+
+### Section 9: PD model monitoring
+
+### Section 10: LGD and EAD models: Preparing the data
+
+### Section 11: LGD model
+
+### Section 12: EAD model
+
+### Section 13: Calculating expected loss
 
 
-1. ...
-[Resposta Ex1.](exercicios/ex1.txt)
+## 🧠 Curso: Amazon Bedrock, Amazon Q & AWS Generative AI
+
+### Section 2: Basics of AI, ML & Neural Networks
+
+### Section 3: Generative AI & Foundation Models Concepts
+
+### Section 4: Amazon Bedrock - Deep Dive
+
+### Section 5: Enterprise Use Case 1: Image Generation 
+
+### Section 6: Enterprise Use Case 2: Text Summarization
+
+### Section 7: Use Case 3: Building a Chatbot
+
+### Section 8: Overview of Vectors & Embeddings
+
+### Section 9: Use Case 4: Building HR Q&A
 
 
-2. ...
-[Resposta Ex2.](exercicios/ex2.txt)
+
+
+# 🔎 Evidências
+
+## 🧠 Curso: Credit Risk Modeling in Python
+
+### Section 1: Introduction
+
+### Section 2: Setting up the working enviroment
+
+### Section 3: Dataset description
+
+### Section 4: General preprocessing
+
+### Section 5: PD model: Data Preparation
+
+### Section 6: PD model estimation
+
+### Section 7: PD model validation
+
+### Section 8: Applying the PD model for decision making
+
+### Section 9: PD model monitoring
+
+### Section 10: LGD and EAD models: Preparing the data
+
+### Section 11: LGD model
+
+### Section 12: EAD model
+
+### Section 13: Calculating expected loss
 
 
 
+## 🧠 Curso: Amazon Bedrock, Amazon Q & AWS Generative AI
 
-# Evidências
+### Section 2: Basics of AI, ML & Neural Networks
+
+### Section 3: Generative AI & Foundation Models Concepts
+
+### Section 4: Amazon Bedrock - Deep Dive
+
+### Section 5: Enterprise Use Case 1: Image Generation 
+
+### Section 6: Enterprise Use Case 2: Text Summarization
+
+### Section 7: Use Case 3: Building a Chatbot
+
+### Section 8: Overview of Vectors & Embeddings
+
+### Section 9: Use Case 4: Building HR Q&A
 
 
-Ao executar o código do exercício ... observei que ... conforme podemos ver na imagem a seguir:
+
+# 👨🏼‍🎓 Certificados
+
+## 🧠 Curso: Credit Risk Modeling in Python
 
 
-![Evidencia 1](evidencias/sample.webp)
-
-
-
-# Certificados
-
-
-- Certificado do Curso ABC
-![Curso ABC](certificados/sample.png)
-
+## 🧠 Curso: Amazon Bedrock, Amazon Q & AWS Generative AI
 
