@@ -3,60 +3,18 @@
     <strong>SPRINT 07</strong>
 </h1>
 
-# 🔗 Vídeo - [Desafio Sprint 07]()
+# 🔗 Vídeo - [Desafio Sprint 07](https://compasso-my.sharepoint.com/:v:/r/personal/matheus_azevedo_pb_compasso_com_br/Documents/Sprint7_Video_Desafio_MatheusAzevedo.mp4?csf=1&web=1&e=2vi8vx)
 
 
 # 📝 Exercícios
 
 ## 🧠 Curso: Credit Risk Modeling in Python
 
-### Section 1: Introduction
-
-### Section 2: Setting up the working enviroment
-
-### Section 3: Dataset description
-
-### Section 4: General preprocessing
-
-### Section 5: PD model: Data Preparation
-
-### Section 6: PD model estimation
-
-### Section 7: PD model validation
-
-### Section 8: Applying the PD model for decision making
-
-### Section 9: PD model monitoring
-
-### Section 10: LGD and EAD models: Preparing the data
-
-### Section 11: LGD model
-
-### Section 12: EAD model
-
-### Section 13: Calculating expected loss
-
+Clique [aqui](./exercicios/curso_credit_risk/) para visualizar os notebooks gerados do curso Credit Risk
 
 ## 🧠 Curso: Amazon Bedrock, Amazon Q & AWS Generative AI
 
-### Section 2: Basics of AI, ML & Neural Networks
-
-### Section 3: Generative AI & Foundation Models Concepts
-
-### Section 4: Amazon Bedrock - Deep Dive
-
-### Section 5: Enterprise Use Case 1: Image Generation 
-
-### Section 6: Enterprise Use Case 2: Text Summarization
-
-### Section 7: Use Case 3: Building a Chatbot
-
-### Section 8: Overview of Vectors & Embeddings
-
-### Section 9: Use Case 4: Building HR Q&A
-
-
-
+Clique [aqui](./exercicios/curso_amazon_bedrock/) para visualizar os códigos gerados do curso Amazon Bedrock
 
 # 🔎 Evidências
 
@@ -64,30 +22,189 @@
 
 ### Section 1: Introduction
 
-### Section 2: Setting up the working enviroment
-
 ### Section 3: Dataset description
+O dataset em que trabalhamos nesse curso contém  mais de 800.000 empréstimos emitidos entre 2007 e 2015 pela Lending Club. O dataset inclui a situação atual do empréstimo (atual, atrasado, totalmente pago, etc.) e as informações de pagamento mais recentes. As features incluem pontuação de crédito, número de consultas financeiras, endereço incluindo códigos postais e estado, e cobranças, entre outros. 
+
+**Link para o dataset no [Kaggle](https://www.kaggle.com/datasets/adarshsng/lending-club-loan-data-csv)**
 
 ### Section 4: General preprocessing
+Na seção 4, um processamento geral do dataset foi feito. Nesse pré-processamento, foram tratadas **variáveis dicretas** e **contínuas**.
+
+- **Variáveis contínuas:** Podem assumir um número **infinito** de valores dentro de um intervalo específico<br>
+
+    **Exemplos:** renda anual (`annual_inc`), dívida sobre renda (`dti`), tempo desde o último atraso (`mths_since_last_delinq`).
+
+- **Variáveis discretas:** Assumem um número **finito** de valores.
+
+    **Exemplos:**  número de inadimplências passadas (`delinq_2yrs`), quantidade de contas em aberto (`open_acc`)
+
+
+Outro passo muito importante para variáveis contínuas e discretas foi a criação de **variáveis dummy**. Como já é sabido, variáveis categóricas precisam ser transformadas para que um modelo possa utilizá-la. Portanto, realiza-se o one-hot-encoding.
+
+![Evidencia](./evidencias/curso_credit_risk/sec4/dummies.png)
+
+Além disso, foi realizado um um check por valores faltantes, que foram tratados posteriormente na etapa de preparação de dados.
+
+![Evidencia](./evidencias/curso_credit_risk/sec4/missing_values.png)
+
 
 ### Section 5: PD model: Data Preparation
+Nesta seção trabalhamos diretamente na modelagem de risco de crédito, que visa prever a **probabilidade de inadimplência (default)** de um cliente, ou seja, a probabilidade de um devedor não pagar as suas dívidas até à data de vencimento.
+
+Portanto, trabalhamos com o PD Model(Probability of Default Model), um modelo que é treinado para estimar essa probabilidade.
+
+A variável-alvo do modelo é **"good/bad loan"**, indicando se um empréstimo foi pago normalmente ou se houve inadimplência. O dataset é preparado de forma que os padrões que diferenciam bons e maus pagadores possam ser identificados pelo modelo.
+
+Exemplo de preparação dos dados
+![Evidencia](./evidencias/curso_credit_risk/sec5/data_preparation.png)
+
+Existem 3 conceitos que foram muito utilizados nessa seção que são importantes de serem ressaltados, eles são: `Weight of Evidence`, `Fine Classing` e `Coarse Classing`.
+
+- **Weight of Evidence(WoE):** É uma métrica que mede a separação entre duas classes (por exemplo, inadimplentes e não inadimplentes) dentro de um conjunto de dados. Ela é cálculada da seguinte forma:
+
+    ![Evidencia](./evidencias/curso_credit_risk/sec5/woe_formula.png)
+
+    Onde `%good` é a porcentagem de bons pagadores, ou seja, aqueles que pagaram o empréstimo corretamente. Já `%bad`são os pagadores que ficaram inadimplentes
+
+    No exemplo abaixo, é possível observar a coluna WoE no dataframe:
+
+    ![Evidencia](./evidencias/curso_credit_risk/sec5/woe_in_df.png)
+
+    Se o WoE for **positivo**, significa que o grupo **tem mais bons pagadores** do que a média da população.<br>
+    Se o WoE for **negativo**, significa que há **mais maus pagadores** do que a média.
+
+- **Fine Classing e Coarse Classing:** Esses métodos são formas de dividir variáveis em **grupos discretos**.
+
+    Com o **fine classing**, cria-se muitos grupos pequenos, ou seja, as variáveis contínuas são divididas em muitas **faixas(bins)**.
+
+    Com o **coarse classing**, muitos grupos pequenos são reduzidos para **grupos maiores**.
+
+
+Previamente foi introduzido os conceitos de variáveis categóricas e numéricas, além do conceito de Weight of Evidence. Nesta seção, trabalhamos com funções que facilitaram muito o pré-processamento de variáveis discretas e contínuas, sendo a `woe_discrete` e `woe_ordereded_continuous`, respectivamente.
+
+- Exemplo de uso da woe_discrete:
+![Evidencia](./evidencias/curso_credit_risk/sec5/woe_discrete.png)
+
+- Exemplo de uso da woe_ordered_continuous:
+![Evidencia](./evidencias/curso_credit_risk/sec5/woe_ordered_continuous.png)
+
+As duas funções seguem o mesmo princípio:
+1. Agrupar os dados.
+2. Calcular proporções de bons e maus pagadores.
+3. Calcular o WoE.
+4. Calcular o IV.
+
+A principal diferença é que `woe_ordered_continuous `é aplicada a variáveis contínuas que foram previamente divididas em bins.
+
+Outra função muito importante para essa seção, é a `plot_woe`, que com uma variável passada por parâmetro, imprime um gráfico para visualizar a relação do **WoE de uma variável categórica ou de bins de uma variável contínua**.
+
+No exemplo abaixo, plotei um gráfico para visualizar o WoE da variável contínua emp_lenght, que representa o tempo de emprego de um funcionário.
+
+![Evidencia](./evidencias/curso_credit_risk/sec5/woe_emp_length_int.png)
+
+O eixo X representa o **tempo de emprego (emp_length_int)**, variando de 0 anos (menos de 1 ano de experiência) até 10 anos ou mais.<br>
+O eixo Y representa o **WoE**, que indica a proporção relativa de bons pagadores dentro de cada grupo.
+
+É possível fazer diversas inferências, mas algumas fáceis de observar são: Para 0 anos, o WoE é negativo **(-0.1 aproximadamente)**, indicando que essa categoria tem uma **proporção maior de maus pagadores** comparada ao total da amostra.<br>  
+Para 10 anos ou mais, o WoE atinge seu maior valor (~0.1), indicando que pessoas com mais tempo de emprego têm **menor risco de inadimplência**.
 
 ### Section 6: PD model estimation
+Na seção 6, utilizamos os datasets que foram exportados da seção 5 para estimar o treinamento do PD Model.
+
+O uso da regressão logística faz sentido pois ela é **adequada para modelar probabilidades**. O PD model basicamente estima a probabilidade de um evento binário, ou seja, *default (1)* ou *não-default(0)*.
+
+Também foi feita uma **feature selection** com o auxílio dos **p-values** para avaliação da significância estatística das variáveis preditoras, essencial para manter variáveis relevantes e descartas aquelas que não tem impacto na previsão de default.
+
+O que eram antes 104 variáveis, após a feature selection ficaram 85.
+
+![Evidencia](./evidencias/curso_credit_risk/sec6/feature_selection.png)
+
+![Evidencia](./evidencias/curso_credit_risk/sec6/summary_table_shape.png)
 
 ### Section 7: PD model validation
+Na seção 7 validamos o PD model utilizando métricas como AUC, ROC e Gini para avaliação do desenpénho do modelo.
+
+É importante que esses conceitos sejam contextualizados:
+
+- **AUC (Area under the curve):**
+    A AUC é uma métrica que mede a capacidade do modelo de distinguir entre classes (neste caso, **empréstimos bons e ruins**).
+
+    Um valor de AUC próximo a 1 indica que o modelo tem uma alta capacidade de discriminação, enquanto um valor próximo a 0.5 sugere que o modelo não é melhor do que uma escolha aleatória.
+
+    ![Evidencia](./evidencias/curso_credit_risk/sec7/roc.png)
+
+- **ROC (Receiver Operating Characteristic):**
+    A curva ROC é um gráfico que mostra a taxa de **verdadeiros positivos (TPR)** em função da taxa de **falsos positivos (FPR)** para diferentes pontos de corte.
+
+    A curva ROC ajuda a visualizar o desempenho do modelo em diferentes limiares de classificação
+
+- **Gini:**
+    O coeficiente de Gini é uma medida de desigualdade que pode ser derivada da AUC. Ele é calculado como Gini = 2 * AUC - 1.
+
+    Um valor de Gini próximo a 1 indica um modelo com alta capacidade de discriminação, enquanto um valor próximo a 0 indica um modelo com baixa capacidade de discriminação.
+
+- **Teste de Kolmogorov-Smirnov(KS)**
+    O teste de Kolmogorov-Smirnov é um teste não paramétrico usado para comparar **duas distribuições**(ou uma distribuição observada com uma teórica). Ele mede a maior diferença absoluta entre as funções de distribuição acumulada (CDFs) das duas distribuições.
+
+    ![Evidencia](./evidencias/curso_credit_risk/sec7/kolmogorov.png)
 
 ### Section 8: Applying the PD model for decision making
+Na seção 8, o principal feito foi a criação do **scorecard**, uma tabela de referência para categorias de variáveis 
 
 ### Section 9: PD model monitoring
+Nesta seção é monitorado o desempenho do modelo PD ao longo do tempo. Os principais pontos incluem:
 
-### Section 10: LGD and EAD models: Preparing the data
+**Análise de Performance:**
+    Comparação entre as previsões de PD e os resultados reais.
+    Verificação de desvios no modelo ao longo do tempo.
+    Uso de métricas como Kolmogorov-Smirnov (KS) e Área Sob a Curva (AUC-ROC) para medir a discriminação do modelo.
 
-### Section 11: LGD model
+**Gráficos e Tabelas:**
+    Plots para visualizar a distribuição das probabilidades previstas versus observadas.
+    Monitoramento de drift do modelo, identificando possíveis deteriorações na precisão.
 
-### Section 12: EAD model
+**Recalibração do Modelo:**
+    Ajuste de coeficientes para manter a acurácia do modelo.
+    Atualização de variáveis preditivas para lidar com mudanças no comportamento dos clientes.
+
+
+### Section 11: LGD model & Section 12: EAD model
+
+Aqui são construídos e avaliados os modelos de **Loss Given Default (LGD)** e **Exposure at Default (EAD)**, componentes críticos para estimar perdas esperadas.
+
+- **Loss Given Default (LGD):**
+    O modelo é dividido em duas etapas:<br>
+    Recuperação Inicial (recovery_rate_st_1): Uma regressão estima a recuperação inicial após o default.
+
+    Recuperação Ajustada (recovery_rate_st_2): Um segundo modelo refina a previsão da taxa de recuperação.
+
+- **Cálculo Final do LGD:**
+    LGD = 1 - recovery_rate (taxa de recuperação).
+    Valores de LGD são ajustados entre 0 e 1 para evitar previsões inválidas.
+
+- **Exposure at Default (EAD):**
+    Modelo de Credit Conversion Factor (CCF) estima a fração do limite de crédito utilizado no momento do default.
+    
+    O EAD final é obtido como:
+    **EAD=CCF×Valor Financiado**
+    Assim como no LGD, valores de EAD são restringidos entre 0 e 1.
+
 
 ### Section 13: Calculating expected loss
+Esta seção combina** PD, LGD e EAD** para calcular a **Perda Esperada (EL)**, fundamental para precificação de risco e provisões bancárias.
 
+- **Preparação dos Dados:**
+    Substituição de valores nulos em variáveis críticas.
+    Junção das previsões de PD, LGD e EAD no conjunto de dados.
+
+- **Fórmula da Perda Esperada:**
+    **EL=PD×LGD×EAD**
+
+    O cálculo é feito para cada contrato de crédito, gerando uma estimativa de perda ajustada ao risco.
+
+- **Validação e Estatísticas:**
+    Descrição estatística dos valores calculados de EL.
+    Análises para verificar a coerência dos resultados.
 
 
 ## 🧠 Curso: Amazon Bedrock, Amazon Q & AWS Generative AI
@@ -272,7 +389,7 @@ Acima é possível ver o prompt passado em conjunto com seu número de tokens ge
 ### Section 9: Use Case 4: Building HR Q&A
 Na seção 9 nós trabalhamos com o HR Q&A com RAG, que é um sistema de **perguntas e respostas(Q&A)** voltado para **recursos humanos(HR)**, utilizando a técnica de **geração aumentada por recuperação(RAG)** para melhorar a precisão das respostas fornecidas por um modelo de inteligência artificial.
 
-**Retrieval-Augmented Generation(RAG)** é um conceito novo que é importante de ser entendido. RAG é uma abordagem de inteligência artificial generativa que busca melhorar a precisão das respostas. Isso é algo importante, pois modelos de IA generativa podem **inventar respostas**, conhecido como alucinações, ou gerá-las com base a**penas nos dados que aprendeu durante o treinamento**. 
+**Retrieval-Augmented Generation(RAG)** é um conceito novo que é importante de ser entendido. RAG é uma abordagem de inteligência artificial generativa que busca melhorar a precisão das respostas. Isso é algo importante, pois modelos de IA generativa podem **inventar respostas**, conhecido como alucinações, ou gerá-las com base **apenas nos dados que aprendeu durante o treinamento**. 
 
 Com o RAG, um sistema busca informações relevantes em um **banco de dados** ou **corpus de documentos** (ex.: PDFs, sites, bases de conhecimento).  O modelo de linguagem recebe tanto a pergunta do usuário quanto o contexto recuperado.
 
@@ -294,6 +411,8 @@ Acima, tem-se um exemplo de uso, onde o prompt passado foi **"how many time leav
 
 ## 🧠 Curso: Credit Risk Modeling in Python
 
+![Certificado](./certificados/curso_credit_risk/certificado_credit_risk.png)
 
 ## 🧠 Curso: Amazon Bedrock, Amazon Q & AWS Generative AI
 
+![Certificado](./certificados/curso_amazon_bedrock/certificado_amazon_bedrock.png)
