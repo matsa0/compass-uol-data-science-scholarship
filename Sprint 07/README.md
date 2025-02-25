@@ -20,8 +20,6 @@ Clique [aqui](./exercicios/curso_amazon_bedrock/) para visualizar os códigos ge
 
 ## 🧠 Curso: Credit Risk Modeling in Python
 
-### Section 1: Introduction
-
 ### Section 3: Dataset description
 O dataset em que trabalhamos nesse curso contém  mais de 800.000 empréstimos emitidos entre 2007 e 2015 pela Lending Club. O dataset inclui a situação atual do empréstimo (atual, atrasado, totalmente pago, etc.) e as informações de pagamento mais recentes. As features incluem pontuação de crédito, número de consultas financeiras, endereço incluindo códigos postais e estado, e cobranças, entre outros. 
 
@@ -149,7 +147,11 @@ Na seção 7 validamos o PD model utilizando métricas como AUC, ROC e Gini para
     ![Evidencia](./evidencias/curso_credit_risk/sec7/kolmogorov.png)
 
 ### Section 8: Applying the PD model for decision making
-Na seção 8, o principal feito foi a criação do **scorecard**, uma tabela de referência para categorias de variáveis 
+Na seção 8, o principal feito foi a criação do **scorecard**. Os principais pontos incluem:
+
+- Definição de uma escala de pontuação (ex.: 300 a 850), onde pontuações mais altas indicam menor risco.
+- A probabilidade de inadimplência (PD) é convertida em odds e depois em um score ajustado.
+- Testes estatísticos como AUC-ROC, Gini e Kolmogorov-Smirnov são usados para medir a precisão do modelo.
 
 ### Section 9: PD model monitoring
 Nesta seção é monitorado o desempenho do modelo PD ao longo do tempo. Os principais pontos incluem:
