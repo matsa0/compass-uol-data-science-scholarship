@@ -1,0 +1,12 @@
+jupyterlab
+pandas
+numpy
+matplotlib
+seaborn
+scikit-learn
+ydata-profiling
+tqdm
+catboost
+xgboost
+six
+plotly
